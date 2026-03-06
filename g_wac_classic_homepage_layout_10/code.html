@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Screening Quiz Classic UI 2026</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b22472", // G-WAC Magenta
+                        "secondary": "#202b5d", // Deep Navy
+                        "slate-custom": "#62718d", // Slate Text
+                        "background-light": "#f8f6f7",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply font-display bg-background-light text-secondary antialiased;
+            }
+        }
+        .quiz-option:checked + label {
+            @apply border-primary bg-primary/5 text-primary ring-1 ring-primary/20;
+        }
+        .quiz-option:checked + label .radio-circle {
+            @apply border-primary text-primary;
+        }
+        .quiz-option:checked + label .radio-inner {
+            @apply bg-primary;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- PROTOTYPE NAV -->
+    <div style="background:#b22472;"
+        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
+        <a href="../gwac.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            Back to Prototype Index
+        </a>
+        <span class="opacity-70">G-WAC Prototype · 05 / 16 — Applicant Journey: Screening Quiz</span>
+        <a href="../g_wac_classic_homepage_layout_6/code.html"
+            class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+            Next: Applicant Dashboard
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+            </svg>
+        </a>
+    </div>
+    <header
+        class="sticky top-0 z-50 w-full border-b border-secondary/10 bg-white/95 backdrop-blur-sm px-6 lg:px-20 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="../gwac.html"
+                    class="flex items-center gap-3 text-secondary hover:opacity-80 transition-opacity">
+                    <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                        class="h-10 w-auto">
+                </a>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold text-slate-custom uppercase tracking-wider hidden sm:block">Screening
+                    Session: #RQ-2026-001</span>
+                <button class="text-secondary hover:text-primary transition-colors">
+                    <span class="material-symbols-outlined">help_outline</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 py-12 px-6 lg:px-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="mb-12">
+                <div class="flex justify-between items-end mb-4">
+                    <div>
+                        <h1 class="text-2xl font-black text-secondary">Graduate Research Screening</h1>
+                        <p class="text-slate-custom text-sm">Question 4 of 12: Research Methodology &amp; Ethics</p>
+                    </div>
+                    <span class="text-secondary font-bold text-sm">33% Complete</span>
+                </div>
+                <div class="h-2.5 w-full bg-secondary/10 rounded-full overflow-hidden">
+                    <div class="h-full bg-secondary rounded-full w-1/3"></div>
+                </div>
+            </div>
+            <div class="bg-white rounded-2xl shadow-xl shadow-secondary/5 border border-secondary/5 overflow-hidden">
+                <div class="p-8 lg:p-12">
+                    <h2 class="text-xl lg:text-2xl font-bold text-secondary leading-tight mb-8">
+                        Which of the following best describes the principle of 'Modular Sustainability' in G-WAC's 2026
+                        research framework?
+                    </h2>
+                    <div class="space-y-4">
+                        <div class="relative">
+                            <input checked="" class="quiz-option hidden" id="opt1" name="quiz" type="radio" />
+                            <label
+                                class="flex items-center gap-4 p-5 rounded-xl border-2 border-secondary/10 hover:border-secondary/20 cursor-pointer transition-all"
+                                for="opt1">
+                                <span
+                                    class="radio-circle size-6 rounded-full border-2 border-current flex items-center justify-center shrink-0">
+                                    <span class="radio-inner size-3 bg-current rounded-full"></span>
+                                </span>
+                                <span class="text-base font-medium">The integration of self-contained academic modules
+                                    that can be updated independently of the core curriculum.</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input class="quiz-option hidden" id="opt2" name="quiz" type="radio" />
+                            <label
+                                class="flex items-center gap-4 p-5 rounded-xl border-2 border-secondary/10 hover:border-secondary/20 cursor-pointer transition-all"
+                                for="opt2">
+                                <span
+                                    class="radio-circle size-6 rounded-full border-2 border-secondary/10 flex items-center justify-center shrink-0">
+                                    <span class="radio-inner size-3 bg-transparent rounded-full"></span>
+                                </span>
+                                <span class="text-base font-medium">A focus exclusively on renewable energy research
+                                    within the physical campus infrastructure.</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input class="quiz-option hidden" id="opt3" name="quiz" type="radio" />
+                            <label
+                                class="flex items-center gap-4 p-5 rounded-xl border-2 border-secondary/10 hover:border-secondary/20 cursor-pointer transition-all"
+                                for="opt3">
+                                <span
+                                    class="radio-circle size-6 rounded-full border-2 border-secondary/10 flex items-center justify-center shrink-0">
+                                    <span class="radio-inner size-3 bg-transparent rounded-full"></span>
+                                </span>
+                                <span class="text-base font-medium">The requirement for students to complete all
+                                    sustainability courses within a single semester.</span>
+                            </label>
+                        </div>
+                        <div class="relative">
+                            <input class="quiz-option hidden" id="opt4" name="quiz" type="radio" />
+                            <label
+                                class="flex items-center gap-4 p-5 rounded-xl border-2 border-secondary/10 hover:border-secondary/20 cursor-pointer transition-all"
+                                for="opt4">
+                                <span
+                                    class="radio-circle size-6 rounded-full border-2 border-secondary/10 flex items-center justify-center shrink-0">
+                                    <span class="radio-inner size-3 bg-transparent rounded-full"></span>
+                                </span>
+                                <span class="text-base font-medium">A decentralized funding model that relies solely on
+                                    private partner entities.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-secondary/5 px-8 py-6 flex items-center justify-between border-t border-secondary/5">
+                    <button
+                        class="flex items-center gap-2 text-slate-custom font-bold hover:text-secondary transition-colors px-4 py-2">
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        Previous
+                    </button>
+                    <button
+                        class="bg-primary hover:bg-primary/90 text-white px-10 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 flex items-center gap-2 transition-transform hover:scale-[1.02] active:scale-[0.98]">
+                        Next Question
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white/50 border border-secondary/10 p-6 rounded-xl flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary">info</span>
+                    <div>
+                        <h4 class="text-secondary font-bold text-sm">Need Help?</h4>
+                        <p class="text-slate-custom text-xs mt-1 leading-relaxed">Refer to the G-WAC 2026 Academic
+                            Prospectus for detailed definitions of our modular framework.</p>
+                    </div>
+                </div>
+                <div class="bg-white/50 border border-secondary/10 p-6 rounded-xl flex items-start gap-4">
+                    <span class="material-symbols-outlined text-primary">timer</span>
+                    <div>
+                        <h4 class="text-secondary font-bold text-sm">Time Remaining</h4>
+                        <p class="text-slate-custom text-xs mt-1 leading-relaxed">You have 18:45 remaining in this
+                            screening session. Your progress is saved automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-white border-t border-secondary/10 py-10 px-6 lg:px-20 mt-auto">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col gap-2 text-center md:text-left">
+                <div
+                    class="flex items-center justify-center md:justify-start gap-2 text-xs font-bold text-secondary uppercase tracking-widest">
+                    <span class="material-symbols-outlined text-lg text-primary">verified_user</span>
+                    Secure Academic Portal
+                </div>
+                <p class="text-[11px] text-slate-custom font-medium uppercase tracking-tight">
+                    © 2026 G-WAC Research Institute. All Rights Reserved.
+                </p>
+            </div>
+            <div class="flex gap-8 text-[11px] font-bold text-slate-custom uppercase tracking-wider">
+                <a class="hover:text-primary transition-colors" href="#">Accessibility Support</a>
+                <a class="hover:text-primary transition-colors" href="#">Terms of Examination</a>
+                <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

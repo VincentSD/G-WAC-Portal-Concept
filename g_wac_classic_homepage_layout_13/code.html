@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Admissions Form Classic UI</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b22472", // G-WAC Magenta
+                        "secondary": "#202b5d", // Deep Navy
+                        "slate-custom": "#62718d", // Slate Text
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#20121a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            input:focus, select:focus, textarea:focus {
+                @apply outline-none ring-2 ring-primary border-primary transition-all;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-background-light font-display text-slate-900 overflow-x-hidden">
+    <!-- PROTOTYPE NAV -->
+    <div style="background:#202b5d;"
+        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
+        <a href="../gwac.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            Back to Prototype Index
+        </a>
+        <span class="opacity-70">G-WAC Prototype · Alternate View — Admissions Form (Classic)</span>
+        <div class="w-24"></div>
+    </div>
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-50 w-full border-b border-secondary/10 bg-white/95 backdrop-blur-sm px-6 lg:px-20 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3 text-secondary">
+                        <div class="size-10 flex items-center justify-center bg-primary rounded-lg text-white">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <div class="flex flex-col">
+                            <h2 class="text-secondary text-xl font-black leading-none tracking-tight">G-WAC</h2>
+                            <span class="text-[10px] uppercase tracking-widest font-bold text-slate-custom">Research
+                                Institute</span>
+                        </div>
+                    </div>
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Research</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Courses</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Impact</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">About</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div
+                        class="hidden xl:flex items-center bg-background-light rounded-lg px-3 py-1.5 border border-secondary/5">
+                        <span class="material-symbols-outlined text-slate-custom text-xl">search</span>
+                        <input
+                            class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-custom/60"
+                            placeholder="Search..." type="text" />
+                    </div>
+                    <button class="text-secondary font-bold text-sm">Help Center</button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 max-w-7xl mx-auto w-full px-6 lg:px-20 py-12">
+            <div class="flex flex-col gap-2 mb-10">
+                <h1 class="text-secondary text-4xl font-black tracking-tight">Admissions <span
+                        class="text-primary italic">2026</span></h1>
+                <p class="text-slate-custom max-w-2xl">Begin your journey at the G-WAC Research Institute. Please
+                    complete the modular application form below.</p>
+            </div>
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                <aside class="lg:col-span-3">
+                    <div class="bg-white rounded-2xl border border-secondary/10 overflow-hidden shadow-sm">
+                        <nav class="flex flex-col p-4">
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl bg-secondary text-white transition-all shadow-lg shadow-secondary/20 mb-2">
+                                <div class="size-8 rounded-lg bg-primary flex items-center justify-center text-white">
+                                    <span class="material-symbols-outlined text-sm">person</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-bold uppercase tracking-widest opacity-70">Step 01</span>
+                                    <span class="font-bold text-sm">Personal Info</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl hover:bg-background-light text-secondary transition-all mb-2 cursor-pointer group">
+                                <div
+                                    class="size-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">history_edu</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-bold uppercase tracking-widest opacity-50">Step 02</span>
+                                    <span class="font-bold text-sm">Academic Background</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl hover:bg-background-light text-secondary transition-all mb-2 cursor-pointer group">
+                                <div
+                                    class="size-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">assignment</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-bold uppercase tracking-widest opacity-50">Step 03</span>
+                                    <span class="font-bold text-sm">Research Proposal</span>
+                                </div>
+                            </div>
+                            <div
+                                class="flex items-center gap-4 p-4 rounded-xl hover:bg-background-light text-secondary transition-all cursor-pointer group">
+                                <div
+                                    class="size-8 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-primary/20 group-hover:text-primary transition-colors">
+                                    <span class="material-symbols-outlined text-sm">cloud_upload</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-xs font-bold uppercase tracking-widest opacity-50">Step 04</span>
+                                    <span class="font-bold text-sm">Documents</span>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="mt-8 p-6 bg-primary/5 border border-primary/10 rounded-2xl">
+                        <h4 class="text-secondary font-bold text-sm mb-2 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary text-lg">info</span>
+                            Need Assistance?
+                        </h4>
+                        <p class="text-slate-custom text-xs leading-relaxed mb-4">Admissions office is open Mon-Fri, 9am
+                            - 5pm UTC for live consultations.</p>
+                        <a class="text-primary font-bold text-xs hover:underline" href="#">Download Handbook PDF</a>
+                    </div>
+                </aside>
+                <div class="lg:col-span-9 bg-white rounded-3xl border border-secondary/10 p-8 lg:p-12 shadow-sm">
+                    <form class="space-y-10">
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-4">
+                                <div class="h-px bg-secondary/10 flex-1"></div>
+                                <span
+                                    class="text-[10px] font-black text-primary uppercase tracking-[0.2em] whitespace-nowrap">Applicant
+                                    Identity</span>
+                                <div class="h-px bg-secondary/10 flex-1"></div>
+                            </div>
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-secondary font-bold text-sm">Full Legal Name</label>
+                                    <input
+                                        class="w-full bg-background-light border-secondary/10 rounded-xl px-4 py-3 text-sm placeholder:text-slate-custom/40 focus:ring-primary focus:border-primary transition-all"
+                                        placeholder="As per passport" type="text" />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-secondary font-bold text-sm">Email Address</label>
+                                    <input
+                                        class="w-full bg-background-light border-secondary/10 rounded-xl px-4 py-3 text-sm placeholder:text-slate-custom/40 focus:ring-primary focus:border-primary transition-all"
+                                        placeholder="example@domain.com" type="email" />
+                                </div>
+                            </div>
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-secondary font-bold text-sm">Date of Birth</label>
+                                    <input
+                                        class="w-full bg-background-light border-secondary/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary transition-all"
+                                        type="date" />
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-secondary font-bold text-sm">Nationality</label>
+                                    <select
+                                        class="w-full bg-background-light border-secondary/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary transition-all">
+                                        <option value="">Select country</option>
+                                        <option value="gh">Ghana</option>
+                                        <option value="ng">Nigeria</option>
+                                        <option value="de">Germany</option>
+                                        <option value="us">United States</option>
+                                    </select>
+                                </div>
+                                <div class="flex flex-col gap-2">
+                                    <label class="text-secondary font-bold text-sm">Gender Identity</label>
+                                    <select
+                                        class="w-full bg-background-light border-secondary/10 rounded-xl px-4 py-3 text-sm focus:ring-primary focus:border-primary transition-all">
+                                        <option value="">Select...</option>
+                                        <option value="f">Female</option>
+                                        <option value="m">Male</option>
+                                        <option value="nb">Non-binary</option>
+                                        <option value="p">Prefer not to say</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-8">
+                            <div class="flex items-center gap-4">
+                                <div class="h-px bg-secondary/10 flex-1"></div>
+                                <span
+                                    class="text-[10px] font-black text-primary uppercase tracking-[0.2em] whitespace-nowrap">Program
+                                    Selection</span>
+                                <div class="h-px bg-secondary/10 flex-1"></div>
+                            </div>
+                            <div class="grid gap-4">
+                                <label class="text-secondary font-bold text-sm">Intended Research Track</label>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <label
+                                        class="relative flex items-center p-4 border-2 border-secondary/10 rounded-2xl cursor-pointer hover:bg-primary/5 has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
+                                        <input class="hidden peer" name="track" type="radio" />
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-lg bg-secondary/5 flex items-center justify-center text-secondary peer-checked:bg-primary peer-checked:text-white">
+                                                <span class="material-symbols-outlined">biotech</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-secondary text-sm">Biosciences &amp;
+                                                    Epidemiology</div>
+                                                <div class="text-slate-custom text-xs">MSc / PhD Integrated</div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto opacity-0 peer-checked:opacity-100 text-primary">
+                                            <span class="material-symbols-outlined">check_circle</span>
+                                        </div>
+                                    </label>
+                                    <label
+                                        class="relative flex items-center p-4 border-2 border-secondary/10 rounded-2xl cursor-pointer hover:bg-primary/5 has-[:checked]:border-primary has-[:checked]:bg-primary/5 transition-all">
+                                        <input class="hidden peer" name="track" type="radio" />
+                                        <div class="flex items-center gap-3">
+                                            <div
+                                                class="size-10 rounded-lg bg-secondary/5 flex items-center justify-center text-secondary peer-checked:bg-primary peer-checked:text-white">
+                                                <span class="material-symbols-outlined">public</span>
+                                            </div>
+                                            <div>
+                                                <div class="font-bold text-secondary text-sm">Sustainability &amp;
+                                                    Climate</div>
+                                                <div class="text-slate-custom text-xs">Master of Advanced Research</div>
+                                            </div>
+                                        </div>
+                                        <div class="ml-auto opacity-0 peer-checked:opacity-100 text-primary">
+                                            <span class="material-symbols-outlined">check_circle</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="pt-10 border-t border-secondary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+                            <div class="flex items-center gap-2 text-slate-custom text-sm">
+                                <span class="material-symbols-outlined text-sm">lock</span>
+                                Secure encrypted submission
+                            </div>
+                            <div class="flex items-center gap-4 w-full md:w-auto">
+                                <button
+                                    class="flex-1 md:flex-none bg-white text-secondary border border-secondary/20 px-8 py-4 rounded-xl font-bold hover:bg-secondary hover:text-white transition-all"
+                                    type="button">
+                                    Save Progress
+                                </button>
+                                <button
+                                    class="flex-1 md:flex-none bg-primary text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform flex items-center justify-center gap-2 shadow-lg shadow-primary/20"
+                                    type="submit">
+                                    Next Step <span class="material-symbols-outlined">arrow_forward</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-secondary pt-20 pb-10 px-6 lg:px-20 text-white mt-12">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 flex items-center justify-center bg-primary rounded-lg">
+                            <span class="material-symbols-outlined text-xl">school</span>
+                        </div>
+                        <h2 class="text-xl font-black">G-WAC</h2>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed">
+                        Advancing academic excellence through modular curriculum design and global institutional
+                        collaboration.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Resources</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">Admission FAQs</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Scholarship Info</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Program Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Contact</h4>
+                    <div class="flex flex-col gap-4 text-sm text-white/60">
+                        <p class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-sm">mail</span> admissions@g-wac.edu
+                        </p>
+                        <p class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-sm">call</span> +1 (555) G-WAC-NOW
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Legal</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">Data Protection</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Terms of Application</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto pt-10 text-center md:text-left text-xs text-white/40">
+                <p>© 2024 G-WAC Research Institute. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
