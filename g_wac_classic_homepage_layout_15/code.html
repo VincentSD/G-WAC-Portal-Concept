@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Classic Homepage Layout 2026</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b22472", // G-WAC Magenta
+                        "secondary": "#202b5d", // Deep Navy
+                        "slate-custom": "#62718d", // Slate Text
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#20121a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- PROTOTYPE NAV -->
+        <div style="background:#b22472;"
+            class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
+            <a href="../gwac.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg>
+                Back to Prototype Index
+            </a>
+            <span class="opacity-70">G-WAC Prototype · 01 / 16 — Public Website: Homepage</span>
+            <a href="../g_wac_classic_homepage_layout_17/code.html"
+                class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+                Next: Course Detail
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                </svg>
+            </a>
+        </div>
+        <header
+            class="sticky top-0 z-50 w-full border-b border-secondary/10 bg-white/95 backdrop-blur-sm px-6 lg:px-20 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a href="../gwac.html"
+                        class="flex items-center gap-3 text-secondary hover:opacity-80 transition-opacity">
+                        <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                            class="h-10 lg:h-12 w-auto">
+                    </a>
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="../g_wac_classic_homepage_layout_5/code.html">Research</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="../g_wac_classic_homepage_layout_17/code.html">Courses</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Impact</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">News</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">About</a>
+                        <a class="text-primary hover:text-primary/80 text-sm font-bold transition-colors bg-primary/5 px-3 py-1 rounded-lg border border-primary/20"
+                            href="../g_wac_moodle_student_dashboard/code.html">Learning Portal</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div
+                        class="hidden xl:flex items-center bg-background-light rounded-lg px-3 py-1.5 border border-secondary/5">
+                        <span class="material-symbols-outlined text-slate-custom text-xl">search</span>
+                        <input
+                            class="bg-transparent border-none focus:ring-0 text-sm w-48 placeholder:text-slate-custom/60"
+                            placeholder="Search publications..." type="text" />
+                    </div>
+                    <a href="../g_wac_classic_homepage_layout_4/code.html"
+                        class="bg-primary hover:bg-primary/90 text-white px-6 py-2.5 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
+                        Apply Now
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1">
+            <section
+                class="relative bg-gradient-to-br from-secondary to-secondary/80 py-24 lg:py-32 px-6 lg:px-20 overflow-hidden">
+                <div class="absolute inset-0 opacity-10"
+                    style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;">
+                </div>
+                <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                    <div class="flex flex-col gap-8">
+                        <div
+                            class="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 px-3 py-1 rounded-full w-fit">
+                            <span class="size-2 bg-primary rounded-full animate-pulse"></span>
+                            <span class="text-primary text-xs font-bold uppercase tracking-wider">Modular Drupal 10
+                                Platform</span>
+                        </div>
+                        <h1 class="text-white text-5xl lg:text-7xl font-black leading-tight">
+                            Advancing Global <span class="text-primary italic">Research</span> Excellence.
+                        </h1>
+                        <p class="text-slate-200 text-lg lg:text-xl max-w-xl leading-relaxed">
+                            A modular academic framework designed for institutional growth, interdisciplinary
+                            innovation, and sustainable development goals.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="../g_wac_classic_homepage_layout_5/code.html"
+                                class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-transform flex items-center gap-2">
+                                Explore Research <span class="material-symbols-outlined">arrow_forward</span>
+                            </a>
+                            <a href="../g_wac_classic_homepage_layout_17/code.html"
+                                class="bg-white/10 text-white border border-white/20 backdrop-blur-md px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all">
+                                Course Catalog
+                            </a>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative">
+                        <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border-8 border-white/5"
+                            data-alt="Modern university laboratory with researchers in white coats">
+                            <img alt="Lab Research" class="w-full h-full object-cover"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1qpFlXMkS80RI6I-82v0u_JN0azLRHAkobznD44FjrAoFMCYvns-tJ7Vp5oY4nM49CUWAxDdSw6xePrHvit4bkHfi8ujs24PxnoF6dAy7O0et3QBRlUMPBIqgzIOiI3Rznam3hsfVAKEGYo8QMqz9-7PL2DhOmy7QroZXYZF81R1v0U_CX3JhOj2Y5CRdnpQ_7IAvYGxBCE86wyK8QMp_x_KeXEh2YCaa6R3Rt_c3uYKjkYF-gAdVpCrCpyrzilei8lhVQA7AyE4R" />
+                        </div>
+                        <div
+                            class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl flex items-center gap-4">
+                            <div
+                                class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+                                <span class="material-symbols-outlined">verified</span>
+                            </div>
+                            <div>
+                                <div class="text-secondary font-bold">QS Ranked 2026</div>
+                                <div class="text-slate-custom text-xs">Top 5% Research Growth</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-white border-y border-secondary/5 py-12 px-6 lg:px-20">
+                <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center text-center lg:items-start lg:text-left gap-2 group">
+                        <span
+                            class="text-primary text-4xl font-black group-hover:scale-110 transition-transform">150+</span>
+                        <span class="text-secondary font-bold text-sm">Active Projects</span>
+                        <p class="text-slate-custom text-xs">Cross-continental initiatives</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center lg:items-start lg:text-left gap-2 group border-l border-secondary/10 lg:pl-8">
+                        <span
+                            class="text-primary text-4xl font-black group-hover:scale-110 transition-transform">45</span>
+                        <span class="text-secondary font-bold text-sm">Partner Entities</span>
+                        <p class="text-slate-custom text-xs">Global academic network</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center lg:items-start lg:text-left gap-2 group border-l border-secondary/10 lg:pl-8">
+                        <span
+                            class="text-primary text-4xl font-black group-hover:scale-110 transition-transform">2.8k</span>
+                        <span class="text-secondary font-bold text-sm">Alumni Network</span>
+                        <p class="text-slate-custom text-xs">Graduated leaders</p>
+                    </div>
+                    <div
+                        class="flex flex-col items-center text-center lg:items-start lg:text-left gap-2 group border-l border-secondary/10 lg:pl-8">
+                        <span
+                            class="text-primary text-4xl font-black group-hover:scale-110 transition-transform">12k+</span>
+                        <span class="text-secondary font-bold text-sm">Citations</span>
+                        <p class="text-slate-custom text-xs">Global research impact</p>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 px-6 lg:px-20 max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-8 flex flex-col gap-10">
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <h2 class="text-secondary text-3xl font-bold">Current Research</h2>
+                                <p class="text-slate-custom mt-2">Pioneering solutions for global challenges.</p>
+                            </div>
+                            <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
+                                href="#">View Archive <span
+                                    class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div
+                                class="group bg-white rounded-xl overflow-hidden border border-secondary/10 hover:border-primary/30 transition-all hover:shadow-xl">
+                                <div class="h-48 overflow-hidden" data-alt="Microscopic view of cellular structure">
+                                    <img alt="Bioscience"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-sOXWQRYA9UIz173qg2UV3xrwiJgaaD6eFY0UMUd2TVxjX8iWIz_iBhZe1171vVTiZ7TCDSuLnqa7Q7HAj638mWeFRZVXpCaS78bL0N0_ZwtvLDf4neg54jEQP9K7cDMbuMJzEsZs6wIcBSaPzcz1eBCKOVnsmDOKfXmcznLSXL7YgCGPp1vX8JK_xDUoQJmpfzh8v0xAxghPeTUW67B7fuZmbmFm9sDAv7nim-zO0LPEa4BCC9fQXBRXpwZcqFFefn15igUqUtqp" />
+                                </div>
+                                <div class="p-6 flex flex-col gap-3">
+                                    <span
+                                        class="text-[10px] font-bold text-primary uppercase tracking-widest">Biosciences</span>
+                                    <h3 class="text-secondary text-lg font-bold leading-tight">Epidemiological Modeling
+                                        in Tropical Climates</h3>
+                                    <p class="text-slate-custom text-sm line-clamp-3">Evaluating the impact of seasonal
+                                        shifts on vector-borne disease transmission using advanced AI integration.</p>
+                                    <div
+                                        class="pt-4 mt-4 border-t border-secondary/5 flex items-center justify-between text-xs text-slate-custom">
+                                        <span>Dr. Elena R. Rossi</span>
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-xs">calendar_today</span> Oct
+                                            2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="group bg-white rounded-xl overflow-hidden border border-secondary/10 hover:border-primary/30 transition-all hover:shadow-xl">
+                                <div class="h-48 overflow-hidden"
+                                    data-alt="Sustainable energy wind turbines in a field">
+                                    <img alt="Sustainability"
+                                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIwG4N-rPkeoSZCkQnuyA7sw4jZ3p_aSlWe-b6ZzfZmIKuIRA4kCuOLADlEXDw04v7DVl2iedPUDVWQNtWO5_U17Zatp5LkA4VO82Kk6p9zhJMXe95iGHZhNaXWzHt-PCfNvhx8TWXGtOePvhlxmwmVXbPMeinfX58ZUP4Q9rpcnK3NphtejNbZ472U4Md_-RMkbeDBlgtgUrQzO8sL1IvGed_2R_xCfDrbuB2xn1vXf-M4AKFxej68tq_D0ojA4gN7udoCH5oFNrV" />
+                                </div>
+                                <div class="p-6 flex flex-col gap-3">
+                                    <span
+                                        class="text-[10px] font-bold text-primary uppercase tracking-widest">Sustainability</span>
+                                    <h3 class="text-secondary text-lg font-bold leading-tight">Urban Resilience
+                                        Frameworks for Coastal Cities</h3>
+                                    <p class="text-slate-custom text-sm line-clamp-3">Collaborative study on
+                                        infrastructure adaptation strategies against rising sea levels in West African
+                                        corridors.</p>
+                                    <div
+                                        class="pt-4 mt-4 border-t border-secondary/5 flex items-center justify-between text-xs text-slate-custom">
+                                        <span>Prof. Marcus Thorne</span>
+                                        <span class="flex items-center gap-1"><span
+                                                class="material-symbols-outlined text-xs">calendar_today</span> Nov
+                                            2026</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="lg:col-span-4">
+                        <div class="sticky top-28 flex flex-col gap-6">
+                            <div class="bg-secondary rounded-2xl p-8 text-white">
+                                <h3 class="text-xl font-bold mb-6">Quick Actions</h3>
+                                <div class="flex flex-col gap-4">
+                                    <a class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
+                                        href="../g_wac_classic_homepage_layout_4/code.html">
+                                        <div class="size-10 rounded-lg bg-primary flex items-center justify-center">
+                                            <span class="material-symbols-outlined">child_hat</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-sm">Admissions</div>
+                                            <div class="text-white/60 text-xs">Enroll for Spring 2026</div>
+                                        </div>
+                                    </a>
+                                    <a class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
+                                        href="../g_wac_classic_homepage_layout_17/code.html">
+                                        <div class="size-10 rounded-lg bg-white/10 flex items-center justify-center">
+                                            <span class="material-symbols-outlined">book</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-sm">Course Catalog</div>
+                                            <div class="text-white/60 text-xs">Browse all modules</div>
+                                        </div>
+                                    </a>
+                                    <a class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
+                                        href="../g_wac_classic_homepage_layout_5/code.html">
+                                        <div class="size-10 rounded-lg bg-white/10 flex items-center justify-center">
+                                            <span class="material-symbols-outlined">science</span>
+                                        </div>
+                                        <div>
+                                            <div class="font-bold text-sm">Research Hub</div>
+                                            <div class="text-white/60 text-xs">Modular research projects</div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="../g_wac_moodle_student_dashboard/code.html"
+                                    class="block w-full mt-8 py-3 bg-white text-secondary rounded-xl font-bold hover:bg-primary hover:text-white transition-all text-sm text-center">
+                                    Student Portal (Moodle)
+                                </a>
+                            </div>
+                            <div class="bg-primary/5 rounded-2xl p-8 border border-primary/10">
+                                <h4 class="text-secondary font-bold mb-2">Upcoming Webinar</h4>
+                                <p class="text-slate-custom text-sm mb-4">"The Future of Modular Education in Global
+                                    South"</p>
+                                <div class="flex items-center gap-2 text-primary font-bold text-sm">
+                                    <span class="material-symbols-outlined text-sm">calendar_month</span> Dec 12, 2026
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+            <section class="bg-secondary/5 py-24 px-6 lg:px-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="text-center mb-16 flex flex-col items-center gap-4">
+                        <span class="text-primary font-black uppercase tracking-[0.3em] text-xs">Academic
+                            Excellence</span>
+                        <h2 class="text-secondary text-4xl font-black">Course Spotlight</h2>
+                        <div class="w-20 h-1 bg-primary rounded-full"></div>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div
+                            class="relative bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 group hover:-translate-y-2 transition-all">
+                            <div
+                                class="absolute -top-3 right-6 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">
+                                2026 INTAKE
+                            </div>
+                            <div
+                                class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-3xl">biotech</span>
+                            </div>
+                            <h3 class="text-secondary text-xl font-bold mb-3">Adv. Bio-Engineering</h3>
+                            <p class="text-slate-custom text-sm mb-6">Explore the frontier of synthetic biology and
+                                genetic architecture through hands-on lab modules.</p>
+                            <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                                href="#">Syllabus Overview <span
+                                    class="material-symbols-outlined text-sm">east</span></a>
+                        </div>
+                        <div
+                            class="relative bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 group hover:-translate-y-2 transition-all">
+                            <div
+                                class="absolute -top-3 right-6 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">
+                                2026 INTAKE
+                            </div>
+                            <div
+                                class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-3xl">public</span>
+                            </div>
+                            <h3 class="text-secondary text-xl font-bold mb-3">Global Health Policy</h3>
+                            <p class="text-slate-custom text-sm mb-6">Analyze international health regulations and the
+                                socio-economic impacts of pandemic responses.</p>
+                            <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                                href="#">Syllabus Overview <span
+                                    class="material-symbols-outlined text-sm">east</span></a>
+                        </div>
+                        <div
+                            class="relative bg-white p-8 rounded-2xl shadow-sm border border-secondary/5 group hover:-translate-y-2 transition-all">
+                            <div
+                                class="absolute -top-3 right-6 bg-primary text-white text-[10px] font-black px-3 py-1 rounded-full shadow-lg">
+                                2026 INTAKE
+                            </div>
+                            <div
+                                class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+                                <span class="material-symbols-outlined text-3xl">database</span>
+                            </div>
+                            <h3 class="text-secondary text-xl font-bold mb-3">Data Ethics &amp; Governance</h3>
+                            <p class="text-slate-custom text-sm mb-6">A critical look at big data utilization, privacy
+                                laws, and ethical AI deployment in modern research.</p>
+                            <a class="text-primary font-bold text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                                href="#">Syllabus Overview <span
+                                    class="material-symbols-outlined text-sm">east</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 px-6 lg:px-20 border-t border-secondary/5 overflow-hidden">
+                <div class="max-w-7xl mx-auto flex flex-col gap-10">
+                    <p class="text-center text-slate-custom text-sm font-bold uppercase tracking-widest">Global
+                        Collaborators</p>
+                    <div
+                        class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all">
+                        <div class="flex items-center gap-2 font-black text-secondary text-xl">
+                            <span class="material-symbols-outlined">architecture</span> UNI-COLLAB
+                        </div>
+                        <div class="flex items-center gap-2 font-black text-secondary text-xl">
+                            <span class="material-symbols-outlined">health_and_safety</span> GLOBAL-HEC
+                        </div>
+                        <div class="flex items-center gap-2 font-black text-secondary text-xl">
+                            <span class="material-symbols-outlined">science</span> SCIENCE-FORGE
+                        </div>
+                        <div class="flex items-center gap-2 font-black text-secondary text-xl">
+                            <span class="material-symbols-outlined">diversity_3</span> PARTNER-NET
+                        </div>
+                        <div class="flex items-center gap-2 font-black text-secondary text-xl">
+                            <span class="material-symbols-outlined">language</span> WORLD-ACAD
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-6 lg:px-20 bg-white">
+                <div class="max-w-7xl mx-auto">
+                    <div class="flex justify-between items-end mb-12">
+                        <div>
+                            <h2 class="text-secondary text-3xl font-bold">News &amp; Publications</h2>
+                            <p class="text-slate-custom">Insights from our leading faculty.</p>
+                        </div>
+                        <button
+                            class="text-secondary border-b-2 border-primary font-bold hover:text-primary transition-colors">Browse
+                            Publications</button>
+                    </div>
+                    <div class="grid lg:grid-cols-4 gap-6">
+                        <div
+                            class="lg:col-span-2 bg-background-light rounded-2xl p-8 flex flex-col justify-between group cursor-pointer border border-transparent hover:border-primary/20 transition-all">
+                            <div>
+                                <span
+                                    class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full">LATEST
+                                    NEWS</span>
+                                <h3
+                                    class="text-secondary text-2xl font-bold mt-4 mb-4 leading-tight group-hover:text-primary transition-colors">
+                                    G-WAC Awarded Institutional Excellence Grant for 2026</h3>
+                                <p class="text-slate-custom text-sm">We are thrilled to announce a $5M grant focusing on
+                                    modular curriculum development and student exchange programs across three
+                                    continents.</p>
+                            </div>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="size-10 rounded-full bg-slate-200" data-alt="Author profile avatar">
+                                    <img alt="Author" class="w-full h-full rounded-full object-cover"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoWnSB5ZnoM1lQMyLtmg1fDwbdGSyRsSepPX4Mk_mdSsMtUSXlpgXFy4s4YelDy5ni3LkXBvjnn9lYGGdq9tzO8ooDdJqbM4MTFpBGHVhik4N529ULAmfF1Tss2l2PzSxP_iwM16Dd9JPebUcGqo4-MNHu1dgJe5z0Y39v_IAYh3b3HOiloJUOwzop2fHmg9PSr3PBtOhhjPjN-LS1L3K_E40ayayQGW8jyN4Xk0ZT8GQpztSUhPuAJqyg3wG4wOoI0wE249UjXCIL" />
+                                </div>
+                                <div>
+                                    <p class="text-secondary font-bold text-sm">James Wilson</p>
+                                    <p class="text-slate-custom text-xs">Director of Communications</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl p-6 border border-secondary/10 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-primary"><span class="material-symbols-outlined text-4xl">article</span>
+                            </div>
+                            <h4 class="text-secondary font-bold text-base leading-tight">Climate Adaptation in Urban
+                                Design</h4>
+                            <p class="text-slate-custom text-xs">Journal of Environmental Planning • Vol 44 (2026)</p>
+                            <button
+                                class="mt-auto text-secondary text-xs font-bold flex items-center gap-1 hover:text-primary transition-colors">Download
+                                PDF <span class="material-symbols-outlined text-xs">download</span></button>
+                        </div>
+                        <div
+                            class="bg-white rounded-2xl p-6 border border-secondary/10 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow">
+                            <div class="text-primary"><span class="material-symbols-outlined text-4xl">article</span>
+                            </div>
+                            <h4 class="text-secondary font-bold text-base leading-tight">Neurological Responses to
+                                Synthetic Stimuli</h4>
+                            <p class="text-slate-custom text-xs">Cognitive Science Quarterly • Nov 2026</p>
+                            <button
+                                class="mt-auto text-secondary text-xs font-bold flex items-center gap-1 hover:text-primary transition-colors">Download
+                                PDF <span class="material-symbols-outlined text-xs">download</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-secondary pt-20 pb-10 px-6 lg:px-20 text-white">
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="size-8 flex items-center justify-center bg-primary rounded-lg">
+                            <span class="material-symbols-outlined text-xl">school</span>
+                        </div>
+                        <h2 class="text-xl font-black">G-WAC</h2>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed">
+                        Leading the charge in modular academic excellence and global research integration. Founded on
+                        the principles of innovation and sustainability.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+                        <a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#"><span class="material-symbols-outlined text-sm">share</span></a>
+                        <a class="size-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors"
+                            href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Institute</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">Research Projects</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Faculties</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Impact Reports</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">News Portal</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Academics</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/60">
+                        <li><a class="hover:text-primary transition-colors" href="#">Course Catalog</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Admissions 2026</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">Scholarships</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#">E-Learning</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6">Connect</h4>
+                    <div class="flex flex-col gap-4 text-sm text-white/60">
+                        <p class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-sm">location_on</span> Academic Ave,
+                            Science Park 404</p>
+                        <p class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-sm">mail</span> info@g-wac.institute
+                        </p>
+                        <p class="flex items-center gap-2"><span
+                                class="material-symbols-outlined text-primary text-sm">call</span> +1 (555) 234-5678</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
+                <p>© 2026 G-WAC Research Institute. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Cookie Policy</a>
+                    <a class="hover:text-white transition-colors" href="#">Accessibility</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
