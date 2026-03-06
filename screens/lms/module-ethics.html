@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Moodle - Module 2</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    colors: {
+                        "primary": "#b22472",
+                        "background-light": "#f8f5f8",
+                        "background-dark": "#221022",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased font-display">
+    <!-- PROTOTYPE NAV -->
+    <div style="background:#202b5d;"
+        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
+        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            Back to Prototype Index
+        </a>
+        <span class="opacity-70">G-WAC Prototype · Moodle Track: 04 / 11 — Ethics Module</span>
+        <a href="quiz-exam.html" class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+            Next: Quiz & Exam 
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+        </a>
+    </div>
+    <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <header
+                class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 bg-background-light dark:bg-background-dark px-6 py-4 sticky top-0 z-50">
+                <a href="../../index.html" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                    <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                        class="h-8 w-auto">
+                </a>
+                <div class="flex items-center gap-4">
+                    <button class="p-2 rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8 border-2 border-primary/20"
+                        data-alt="User profile avatar placeholder"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1p9TgmiUrfC_KICiXJ6WEkxz_XBvZ6I_K4noIsP0PYq1sabEY11A8Y7YnCnD0TRLlZhBKnNMf2vYEO7SyzpOw22ngbVNhHntWNtUCHcOK6BfP6DcIMJUfyicY4q0RMBR359Ybz4sRCmUe4RTxNWSlVAjqWgACLzW-c-GxlPJMRBmK6svimK5FWkvbY9ZTlUEIDyW2slvZUQ4ltshm87yqX-_-j8ng_6-zRkLyLccBYFHY1ft-8Y6sCTAVd1A3OioFmkSCMs7KFrba");'>
+                    </div>
+                </div>
+            </header>
+            <main
+                class="flex-1 flex flex-col max-w-md mx-auto w-full bg-white dark:bg-slate-900 shadow-sm min-h-screen">
+                <div class="w-full">
+                    <div
+                        class="relative flex items-center justify-center bg-slate-200 dark:bg-slate-800 aspect-video w-full overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-80"
+                            data-alt="Video thumbnail showing clinical research setting"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZiHVuNleeMJid_YT3wVN5TbGBabcx5QqlPwZu_qGBNeD_r19YFDo5kyv4grEg1D6WefKsGepq8aekQwX06QG4hImA-PERn_gIyh7RSx3_RckG5iDfNpjLnHqvjhkar92PO9n6m6j0CYL0BMol6DX0lSkxOjcq-PMSxEfXTVpulRCdPbQVFjVN3rK4Lemzn1Nss-VCkEdvVIIASS4so44f_FuAN2BoClB9q0Dw59PBUTCZwIX0wZ21nI9WoC0O1M-ihyjcYms9MPz3");'>
+                        </div>
+                        <div class="absolute inset-0 bg-black/30"></div>
+                        <button
+                            class="relative flex shrink-0 items-center justify-center rounded-full size-16 bg-primary/90 text-white shadow-xl">
+                            <span class="material-symbols-outlined text-4xl leading-none">play_arrow</span>
+                        </button>
+                        <div
+                            class="absolute inset-x-0 bottom-0 px-4 py-3 bg-gradient-to-t from-black/80 to-transparent">
+                            <div class="flex h-1 items-center justify-center mb-2">
+                                <div class="h-1 flex-1 rounded-full bg-primary"></div>
+                                <div class="relative">
+                                    <div
+                                        class="absolute -left-1 -top-1.5 size-3 rounded-full bg-white border-2 border-primary">
+                                    </div>
+                                </div>
+                                <div class="h-1 flex-[2] rounded-full bg-white/30"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <p class="text-white text-[10px] font-medium">04:12</p>
+                                <p class="text-white text-[10px] font-medium">18:45</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-6 py-6 flex flex-col gap-4">
+                    <div class="flex flex-col gap-1">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest">Research Ethics</span>
+                        <h1 class="text-slate-900 dark:text-slate-100 text-2xl font-black leading-tight">Module 2:
+                            Ethics in Research</h1>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm">Estimated reading time: 15 mins</p>
+                    </div>
+                    <div class="prose prose-slate dark:prose-invert max-w-none">
+                        <p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed">
+                            This module covers the fundamental principles of ethical research, including
+                            <strong>informed consent</strong>, <strong>data privacy</strong>, and <strong>institutional
+                                review board (IRB)</strong> protocols. Ethical guidelines ensure that research is
+                            conducted with integrity and respect for participants.
+                        </p>
+                        <p class="text-slate-700 dark:text-slate-300 text-base leading-relaxed mt-2">
+                            When processing participant data, ensure you follow the standard anonymization protocols as
+                            defined in the institute's handbook. Below is the standard data schema for participant
+                            records:
+                        </p>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-4 my-2 overflow-x-auto border border-slate-700">
+                        <pre class="text-primary text-sm font-mono leading-relaxed"><code>{
+  "participant_id": "UUID",
+  "consent_status": Boolean,
+  "data_points": [
+    "biometric_hash",
+    "demographic_data"
+  ],
+  "retention_policy": "P5Y"
+}</code></pre>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-slate-900 dark:text-slate-100 text-lg font-bold mb-3 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-primary">upload_file</span>
+                            Assignment Submission
+                        </h3>
+                        <div
+                            class="border-2 border-dashed border-primary/30 bg-primary/5 rounded-xl p-8 flex flex-col items-center justify-center gap-3 text-center">
+                            <span class="material-symbols-outlined text-4xl text-primary/60">cloud_upload</span>
+                            <div>
+                                <p class="text-slate-900 dark:text-slate-100 font-semibold text-sm">Tap to upload or
+                                    drag &amp; drop</p>
+                                <p class="text-slate-500 dark:text-slate-400 text-xs mt-1">PDF, DOCX (Max 10MB)</p>
+                            </div>
+                            <button
+                                class="mt-2 px-4 py-2 bg-white dark:bg-slate-800 border border-primary/20 rounded-lg text-primary text-xs font-bold shadow-sm">
+                                Select File
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-auto p-6 border-t border-primary/10 bg-slate-50 dark:bg-slate-900/50">
+                    <button
+                        class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all">
+                        <span>Next Module: Data Analysis</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                    <div class="flex justify-between mt-6 px-2">
+                        <button class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">arrow_back</span>
+                            Previous
+                        </button>
+                        <button class="text-slate-500 dark:text-slate-400 text-sm flex items-center gap-1">
+                            <span class="material-symbols-outlined text-sm">list</span>
+                            Contents
+                        </button>
+                    </div>
+                </div>
+            </main>
+            <nav
+                class="fixed bottom-0 left-0 right-0 bg-white dark:bg-slate-900 border-t border-primary/10 flex justify-around items-center py-3 md:hidden">
+                <button class="flex flex-col items-center gap-1 text-primary">
+                    <span class="material-symbols-outlined">home</span>
+                    <span class="text-[10px] font-medium">Home</span>
+                </button>
+                <button class="flex flex-col items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined">book</span>
+                    <span class="text-[10px] font-medium">Courses</span>
+                </button>
+                <button class="flex flex-col items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined">calendar_today</span>
+                    <span class="text-[10px] font-medium">Schedule</span>
+                </button>
+                <button class="flex flex-col items-center gap-1 text-slate-400">
+                    <span class="material-symbols-outlined">person</span>
+                    <span class="text-[10px] font-medium">Profile</span>
+                </button>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
