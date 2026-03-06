@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Moodle Certificate Preview</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c61074",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#22101a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+
+        .certificate-container {
+            box-shadow: 0 10px 25px -5px rgba(198, 16, 116, 0.1), 0 8px 10px -6px rgba(198, 16, 116, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+    <div class="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden">
+        <div class="layout-container flex h-full grow flex-col">
+            <!-- Top Navigation -->
+            <header
+                class="flex items-center justify-between border-b border-primary/10 bg-white dark:bg-background-dark px-10 py-3">
+                <div class="flex items-center gap-8">
+                    <div class="flex items-center gap-3">
+                        <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                            class="h-10 w-auto">
+                        <div class="flex flex-col">
+                            <span
+                                class="text-slate-900 dark:text-white text-lg font-black leading-none tracking-tight">G-WAC</span>
+                            <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Learning
+                                Portal</span>
+                        </div>
+                    </div>
+                    <div class="hidden md:flex items-center gap-9">
+                        <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Dashboard</a>
+                        <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">My Courses</a>
+                        <a class="text-slate-900 dark:text-slate-100 text-sm font-bold border-b-2 border-primary"
+                            href="#">Certificates</a>
+                        <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
+                            href="#">Verification</a>
+                    </div>
+                </div>
+                <div class="flex flex-1 justify-end gap-6 items-center">
+                    <div class="flex gap-4">
+                        <button
+                            class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined">notifications</span>
+                        </button>
+                        <button
+                            class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary">
+                            <span class="material-symbols-outlined">account_circle</span>
+                        </button>
+                    </div>
+                    <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 border border-primary/20"
+                        data-alt="User profile avatar placeholder"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAZ-0kj1YhU9ecys8cy_3wX9fKUQfKbwft_MvvcmAuVKQ0MyaQptq56nUXVp6lrXVfYvsMKBDMh6mYTGwnmPENphMbUijNQC1vIKwy_RUHNW9_FvASz2ygDYi27uP99Ddy3-wk8ZRGfppmIqDjdQjoRJCZa4pTUn4Tn5g8kDMmrYCmVXS2QS85d9tTCGTXG8gRnxdY7IrRzr7lq_HqaEGPgmDqQjf6qnO3gxcNO8W8wrFhhtDQ5g7ZNBU7N8S7zAnwtwohpRiFvis8x");'>
+                    </div>
+                </div>
+            </header>
+            <main class="flex-1 px-4 md:px-20 lg:px-40 py-8">
+                <!-- Breadcrumbs -->
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <a class="text-primary text-sm font-medium" href="#">Home</a>
+                    <span class="text-slate-400 text-sm font-medium">/</span>
+                    <a class="text-primary text-sm font-medium" href="#">Verification</a>
+                    <span class="text-slate-400 text-sm font-medium">/</span>
+                    <span class="text-slate-500 dark:text-slate-400 text-sm font-medium">GWAC-2023-089-PRV</span>
+                </div>
+                <!-- Header Section -->
+                <div class="flex flex-col mb-8">
+                    <h1 class="text-slate-900 dark:text-slate-100 text-4xl font-black leading-tight tracking-tight">
+                        Certificate Verification</h1>
+                    <p class="text-slate-600 dark:text-slate-400 text-lg mt-2">Authentic credential issued by the G-WAC
+                        Research Institute</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                    <!-- Left: Certificate Preview -->
+                    <div class="lg:col-span-8 flex flex-col gap-6">
+                        <div
+                            class="certificate-container bg-white dark:bg-slate-800 p-8 md:p-12 rounded-xl border border-primary/10 relative overflow-hidden aspect-[1.414/1]">
+                            <!-- Certificate Background Pattern -->
+                            <div class="absolute inset-0 opacity-5 pointer-events-none"
+                                style="background-image: radial-gradient(circle at 2px 2px, #c61074 1px, transparent 0); background-size: 24px 24px;">
+                            </div>
+                            <div class="absolute inset-4 border-2 border-primary/20 rounded-lg pointer-events-none">
+                            </div>
+                            <div class="absolute inset-6 border border-primary/10 rounded-lg pointer-events-none"></div>
+                            <!-- Certificate Content -->
+                            <div class="relative flex flex-col items-center text-center h-full justify-between">
+                                <div class="flex flex-col items-center">
+                                    <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png"
+                                        alt="G-WAC Logo" class="h-16 w-auto mb-6">
+                                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">German-West
+                                        African Centre</span>
+                                    <h2 class="text-slate-800 dark:text-white text-3xl font-serif mt-6">CERTIFICATE OF
+                                        COMPLETION</h2>
+                                    <p class="text-slate-500 dark:text-slate-400 italic mt-4">This is to certify that
+                                    </p>
+                                    <h3
+                                        class="text-slate-900 dark:text-white text-4xl font-bold mt-2 py-2 border-b-2 border-primary/30 inline-block px-8">
+                                        Dr. Elena Rodriguez</h3>
+                                    <p class="text-slate-500 dark:text-slate-400 mt-6 max-w-lg">has successfully
+                                        completed the intensive professional development program in</p>
+                                    <h4 class="text-slate-900 dark:text-white text-2xl font-bold mt-2">Advanced
+                                        Epidemiology Research Methods</h4>
+                                </div>
+                                <div class="w-full flex justify-between items-end mt-12 px-8">
+                                    <div class="flex flex-col items-center border-t border-slate-300 pt-2 w-32">
+                                        <img alt="Signature 1" class="h-10 mb-2 grayscale opacity-80"
+                                            data-alt="Official digital signature of the director"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB78Azu0Bu7DcU5gyVeLlXb1aWmOjb9KVlmU0hUt7Zj_xo9xPFCSlEMoNM6VJnfpMGk8O-8PwlbFJnZ1HAgOmTx0FXY4IY2_2CK29Rt_iOLRR9mCzekDNcHQlAlBi6Kw1mTSJYhcF9tyA8EF-fE4GYL8riGpdS6423ECARCyp6gvq-9RmwAhAT_RRVJTxJb5-3U1nzXuALP4WlK2T2-PBpL4zdJu1kagfQIMBoRnUQ3_bbv08aNWvVL9Iec4iR7pXNEUfi1gb6EYxAy" />
+                                        <span
+                                            class="text-[10px] text-slate-500 uppercase tracking-widest">Director</span>
+                                    </div>
+                                    <div class="flex flex-col items-center">
+                                        <div
+                                            class="size-20 rounded-full border-4 border-primary/20 flex items-center justify-center text-primary/40 relative">
+                                            <span class="material-symbols-outlined text-4xl">verified_user</span>
+                                            <div
+                                                class="absolute inset-0 rounded-full border border-primary/30 animate-pulse">
+                                            </div>
+                                        </div>
+                                        <span class="text-[8px] text-slate-400 mt-2 font-mono">SEAL OF
+                                            AUTHENTICITY</span>
+                                    </div>
+                                    <div class="flex flex-col items-center border-t border-slate-300 pt-2 w-32">
+                                        <img alt="Signature 2" class="h-10 mb-2 grayscale opacity-80"
+                                            data-alt="Official digital signature of the registrar"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpDFdBcPwGby47owhneM0QhV5FsAuPBIQy13PWeUSX_adM00MkpJdPLHIZYvTbsqJxNJ1mTdqBab9M0zm4BP_2lQ_IEjc9ILyGnQvBWtCJ6f5i8SRsLnNU9EmM52QXZtzj80cweXxmxb6Iw88b8ctH76LToA6GyeXKYLUQGkMyZzROFGV_bicyTlZca8miy9nKGYriKc8GblBhAqPAed7F7WM_f55N0_uqY_MDoj8-EhrpZ6sVk8yEob1lJvwZ7SSs3Kil0xtq7Lhc" />
+                                        <span
+                                            class="text-[10px] text-slate-500 uppercase tracking-widest">Registrar</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Summary Table -->
+                        <div
+                            class="bg-white dark:bg-slate-800 rounded-xl border border-primary/10 overflow-hidden mt-4">
+                            <div class="p-4 border-b border-primary/10">
+                                <h3 class="font-bold text-slate-900 dark:text-slate-100">Course Summary Details</h3>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left">
+                                    <thead class="bg-primary/5">
+                                        <tr>
+                                            <th
+                                                class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                                Curriculum Area</th>
+                                            <th
+                                                class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                                Duration</th>
+                                            <th
+                                                class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                                Assessment</th>
+                                            <th
+                                                class="px-6 py-4 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                                                Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-primary/10">
+                                        <tr>
+                                            <td
+                                                class="px-6 py-4 text-sm text-slate-700 dark:text-slate-300 font-medium">
+                                                Public Health &amp; Research</td>
+                                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">120 Hours
+                                            </td>
+                                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">94.5%</td>
+                                            <td class="px-6 py-4 text-sm">
+                                                <span
+                                                    class="px-2 py-1 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-full text-xs font-bold uppercase tracking-tighter">Verified</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: Side Panel -->
+                    <div class="lg:col-span-4 flex flex-col gap-6">
+                        <!-- Verification Card -->
+                        <div
+                            class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col gap-6 shadow-sm">
+                            <div>
+                                <p class="text-xs font-bold text-primary uppercase tracking-widest mb-1">Verification
+                                    Status</p>
+                                <div class="flex items-center gap-2 text-green-600">
+                                    <span class="material-symbols-outlined">verified</span>
+                                    <span class="font-bold">Authentic &amp; Valid</span>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-2">Verification
+                                    ID</p>
+                                <div
+                                    class="flex items-center justify-between bg-primary/5 p-3 rounded-lg border border-primary/10">
+                                    <code
+                                        class="font-mono text-primary font-bold text-sm tracking-wider">GWAC-9928-XJ3-2023</code>
+                                    <button class="text-primary hover:text-primary/80">
+                                        <span class="material-symbols-outlined text-lg">content_copy</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-3 pt-4 border-t border-primary/10">
+                                <button
+                                    class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md active:scale-95">
+                                    <span class="material-symbols-outlined">download</span>
+                                    Download PDF
+                                </button>
+                                <button
+                                    class="w-full flex items-center justify-center gap-2 bg-[#0a66c2] hover:bg-[#0a66c2]/90 text-white font-bold py-3 px-4 rounded-lg transition-all shadow-md active:scale-95">
+                                    <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                        <path
+                                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z">
+                                        </path>
+                                    </svg>
+                                    Share to LinkedIn
+                                </button>
+                                <button
+                                    class="w-full flex items-center justify-center gap-2 bg-white dark:bg-slate-700 hover:bg-slate-50 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-bold py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-600 transition-all">
+                                    <span class="material-symbols-outlined">print</span>
+                                    Print Certificate
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Recipient Info Card -->
+                        <div
+                            class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-primary/10 flex flex-col gap-4 shadow-sm">
+                            <h4 class="font-bold text-slate-900 dark:text-slate-100 border-b border-primary/10 pb-2">
+                                Credential Details</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-slate-500">Issued on</span>
+                                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">Oct 24,
+                                        2023</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-slate-500">Expires on</span>
+                                    <span class="text-sm font-semibold text-slate-900 dark:text-slate-100">None</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-slate-500">Grade</span>
+                                    <span
+                                        class="text-sm font-semibold text-slate-900 dark:text-slate-100">Distinction</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-slate-500">Institute</span>
+                                    <span
+                                        class="text-sm font-semibold text-slate-900 dark:text-slate-100 text-right">G-WAC
+                                        Research</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Contact/Support -->
+                        <div class="bg-primary/5 p-6 rounded-xl border border-primary/20 flex items-start gap-4">
+                            <span class="material-symbols-outlined text-primary">info</span>
+                            <div>
+                                <p class="text-sm font-bold text-primary mb-1">Verify another certificate?</p>
+                                <p class="text-xs text-slate-600 dark:text-slate-400">If you are an employer seeking to
+                                    verify multiple credentials, please contact our registrar office.</p>
+                                <a class="inline-block mt-3 text-xs font-bold text-primary underline underline-offset-4"
+                                    href="#">Learn more about verification</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <!-- Footer -->
+            <footer class="mt-12 py-10 px-10 border-t border-primary/10 bg-white dark:bg-background-dark text-center">
+                <p class="text-slate-500 dark:text-slate-400 text-sm">© 2023 German-West African Centre (G-WAC) Research
+                    Institute. All rights reserved.</p>
+                <div class="flex justify-center gap-6 mt-4">
+                    <a class="text-xs text-slate-400 hover:text-primary" href="#">Privacy Policy</a>
+                    <a class="text-xs text-slate-400 hover:text-primary" href="#">Terms of Service</a>
+                    <a class="text-xs text-slate-400 hover:text-primary" href="#">Credential Policy</a>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

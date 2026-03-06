@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Moodle Learning Analytics Hub</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#1152d4",
+                        "navy": "#1e293b",
+                        "magenta": "#d946ef",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light text-slate-900 font-display">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Top Navigation Bar -->
+        <header class="flex items-center justify-between border-b border-slate-200 bg-white px-6 py-3 lg:px-20">
+            <div class="flex items-center gap-8">
+                <div class="flex items-center gap-3">
+                    <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                        class="h-8 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-slate-900 text-sm font-black leading-none tracking-tight">G-WAC</span>
+                        <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Portal</span>
+                    </div>
+                </div>
+                <label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+                    <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                        <div
+                            class="text-slate-400 flex border-none bg-slate-100 items-center justify-center pl-4 rounded-l-lg">
+                            <span class="material-symbols-outlined text-sm">search</span>
+                        </div>
+                        <input
+                            class="form-input flex w-full min-w-0 flex-1 border-none bg-slate-100 focus:ring-0 text-slate-900 placeholder:text-slate-400 px-4 rounded-r-lg text-sm"
+                            placeholder="Search analytics..." value="" />
+                    </div>
+                </label>
+            </div>
+            <div class="flex flex-1 justify-end gap-6 items-center">
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a class="text-slate-900 text-sm font-medium border-b-2 border-primary pb-1" href="#">Dashboard</a>
+                    <a class="text-slate-500 hover:text-primary text-sm font-medium" href="#">Courses</a>
+                    <a class="text-slate-500 hover:text-primary text-sm font-medium" href="#">Reports</a>
+                    <a class="text-slate-500 hover:text-primary text-sm font-medium" href="#">Students</a>
+                </nav>
+                <div class="flex gap-2">
+                    <button
+                        class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                    <button
+                        class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 text-slate-700 hover:bg-slate-200">
+                        <span class="material-symbols-outlined">settings</span>
+                    </button>
+                </div>
+                <div
+                    class="bg-primary/20 rounded-full size-10 flex items-center justify-center border-2 border-white shadow-sm overflow-hidden">
+                    <img alt="Profile" class="w-full h-full object-cover" data-alt="Student profile avatar placeholder"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyFvQxxcatA2pR8H7z1VpaIElWNssylBYf-ljlAqWSMoON22dl1bHfrDgrTuEP5eSd1qY0KD6SW55HrHk_ofvGYZoPctWLZ-2OW7_TOnO5HQJAel-sOoYy7uQipyGNrEb9HOyZVl5Xhd7XvXOHMyenBFDcsis33rTJ5zh_7gn2_eO9PG004MzpdfQIXHf26MbLY8PUrGqQZcWo-wGnPAH1nU6kjwtAn8_hXk_IGTd6iZ3MiQEk-vx6wWSsGPY86H7v1Zer_v9_wYUd" />
+                </div>
+            </div>
+        </header>
+        <div class="flex flex-1">
+            <!-- Sidebar -->
+            <aside class="hidden md:flex w-64 flex-col border-r border-slate-200 bg-white p-6 gap-6">
+                <div class="flex flex-col">
+                    <h1 class="text-secondary text-base font-black">G-WAC</h1>
+                    <p class="text-slate-500 text-[10px] font-bold uppercase tracking-wider">Learning Portal</p>
+                </div>
+                <div class="flex flex-col gap-1">
+                    <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                        <p class="text-sm font-semibold">Overview</p>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined text-[20px]">insights</span>
+                        <p class="text-sm font-medium">Performance</p>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined text-[20px]">timer</span>
+                        <p class="text-sm font-medium">Time Tracking</p>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined text-[20px]">groups</span>
+                        <p class="text-sm font-medium">Participation</p>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 hover:bg-slate-50">
+                        <span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+                        <p class="text-sm font-medium">Compliance</p>
+                    </div>
+                </div>
+                <div class="mt-auto bg-slate-50 rounded-xl p-4 border border-slate-100">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">My Progress</p>
+                    <div class="flex justify-between items-end mb-1">
+                        <span class="text-xl font-bold text-slate-900">72%</span>
+                        <span class="text-xs font-medium text-slate-500">Target: 85%</span>
+                    </div>
+                    <div class="w-full bg-slate-200 rounded-full h-1.5">
+                        <div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div>
+                    </div>
+                </div>
+            </aside>
+            <!-- Main Content Area -->
+            <main class="flex-1 bg-background-light p-6 lg:p-10 overflow-y-auto">
+                <div class="max-w-6xl mx-auto flex flex-col gap-8">
+                    <!-- Page Title Section -->
+                    <div class="flex flex-wrap items-center justify-between gap-4">
+                        <div class="flex flex-col gap-1">
+                            <h1 class="text-3xl font-black text-slate-900 tracking-tight">Learning Analytics Hub</h1>
+                            <p class="text-slate-500 text-sm">Live engagement metrics for <span
+                                    class="font-semibold text-primary">Advanced Research Methods (ARM-2024)</span></p>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-lg text-sm font-semibold text-slate-700 hover:bg-slate-50">
+                                <span class="material-symbols-outlined text-sm">calendar_today</span>
+                                This Semester
+                            </button>
+                            <button
+                                class="flex items-center gap-2 px-4 py-2 bg-primary rounded-lg text-sm font-semibold text-white hover:bg-blue-700 shadow-md transition-all">
+                                <span class="material-symbols-outlined text-sm">download</span>
+                                Export Data
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Stats Summary Row -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-slate-500 text-sm font-medium">Average Grade</span>
+                                <div
+                                    class="size-8 bg-green-50 rounded-lg flex items-center justify-center text-green-600">
+                                    <span class="material-symbols-outlined text-lg">trending_up</span>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-slate-900">88.4%</p>
+                            <p class="text-xs text-green-600 font-semibold mt-1">+2.4% vs last week</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-slate-500 text-sm font-medium">Quiz Submissions</span>
+                                <div
+                                    class="size-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600">
+                                    <span class="material-symbols-outlined text-lg">fact_check</span>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-slate-900">142</p>
+                            <p class="text-xs text-slate-400 font-medium mt-1">98% completion rate</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-slate-500 text-sm font-medium">Active Hours</span>
+                                <div
+                                    class="size-8 bg-purple-50 rounded-lg flex items-center justify-center text-purple-600">
+                                    <span class="material-symbols-outlined text-lg">schedule</span>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-slate-900">24.5h</p>
+                            <p class="text-xs text-purple-600 font-semibold mt-1">+12% engagement</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-6 border border-slate-200 shadow-sm">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="text-slate-500 text-sm font-medium">Resource Views</span>
+                                <div
+                                    class="size-8 bg-amber-50 rounded-lg flex items-center justify-center text-amber-600">
+                                    <span class="material-symbols-outlined text-lg">description</span>
+                                </div>
+                            </div>
+                            <p class="text-2xl font-bold text-slate-900">892</p>
+                            <p class="text-xs text-slate-400 font-medium mt-1">Total downloads: 412</p>
+                        </div>
+                    </div>
+                    <!-- Primary Data Visualization Grid -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <!-- Time Spent per Module (Navy/Magenta Bar Chart) -->
+                        <div class="lg:col-span-2 bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                            <div class="flex items-center justify-between mb-8">
+                                <div>
+                                    <h3 class="text-lg font-bold text-slate-900">Time Spent per Module</h3>
+                                    <p class="text-xs text-slate-500">Comparison of engagement across modules</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="flex items-center gap-2">
+                                        <div class="size-2.5 rounded-full bg-navy"></div>
+                                        <span
+                                            class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Video
+                                            Content</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <div class="size-2.5 rounded-full bg-magenta"></div>
+                                        <span
+                                            class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Reading
+                                            Labs</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-end justify-around h-64 w-full px-4 border-b border-slate-100">
+                                <!-- Module 1 -->
+                                <div class="flex flex-col items-center w-full gap-2 group">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 40%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 30%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M01</span>
+                                </div>
+                                <!-- Module 2 -->
+                                <div class="flex flex-col items-center w-full gap-2">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 25%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 55%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M02</span>
+                                </div>
+                                <!-- Module 3 -->
+                                <div class="flex flex-col items-center w-full gap-2">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 60%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 20%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M03</span>
+                                </div>
+                                <!-- Module 4 -->
+                                <div class="flex flex-col items-center w-full gap-2">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 45%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 45%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M04</span>
+                                </div>
+                                <!-- Module 5 -->
+                                <div class="flex flex-col items-center w-full gap-2">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 70%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 15%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M05</span>
+                                </div>
+                                <!-- Module 6 -->
+                                <div class="flex flex-col items-center w-full gap-2">
+                                    <div class="flex flex-col items-center w-12 gap-1 h-full justify-end">
+                                        <div class="w-full bg-magenta rounded-t-sm" style="height: 35%"></div>
+                                        <div class="w-full bg-navy rounded-b-sm" style="height: 40%"></div>
+                                    </div>
+                                    <span class="text-[11px] font-semibold text-slate-500">M06</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Performance Radar Chart -->
+                        <div
+                            class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm flex flex-col items-center">
+                            <div class="w-full mb-6">
+                                <h3 class="text-lg font-bold text-slate-900">Performance Radar</h3>
+                                <p class="text-xs text-slate-500">Quiz proficiency by category</p>
+                            </div>
+                            <div class="relative w-full aspect-square max-w-[240px] flex items-center justify-center">
+                                <svg class="w-full h-full overflow-visible" viewbox="0 0 100 100">
+                                    <!-- Background polygons -->
+                                    <polygon fill="none" points="50,10 90,40 75,90 25,90 10,40" stroke="#f1f5f9"
+                                        stroke-width="0.5"></polygon>
+                                    <polygon fill="none" points="50,25 80,48 68,85 32,85 20,48" stroke="#f1f5f9"
+                                        stroke-width="0.5"></polygon>
+                                    <polygon fill="none" points="50,40 70,55 62,80 38,80 30,55" stroke="#f1f5f9"
+                                        stroke-width="0.5"></polygon>
+                                    <!-- Data polygon -->
+                                    <polygon fill="rgba(17, 82, 212, 0.2)" points="50,15 85,45 65,85 35,75 15,35"
+                                        stroke="#1152d4" stroke-linejoin="round" stroke-width="2"></polygon>
+                                    <!-- Axis lines -->
+                                    <line stroke="#cbd5e1" stroke-width="0.5" x1="50" x2="50" y1="50" y2="10"></line>
+                                    <line stroke="#cbd5e1" stroke-width="0.5" x1="50" x2="90" y1="50" y2="40"></line>
+                                    <line stroke="#cbd5e1" stroke-width="0.5" x1="50" x2="75" y1="50" y2="90"></line>
+                                    <line stroke="#cbd5e1" stroke-width="0.5" x1="50" x2="25" y1="50" y2="90"></line>
+                                    <line stroke="#cbd5e1" stroke-width="0.5" x1="50" x2="10" y1="50" y2="40"></line>
+                                    <!-- Labels (estimated positioning) -->
+                                    <text class="text-[4px] font-bold fill-slate-500" text-anchor="middle" x="50"
+                                        y="5">Logic</text>
+                                    <text class="text-[4px] font-bold fill-slate-500" text-anchor="start" x="92"
+                                        y="42">Methods</text>
+                                    <text class="text-[4px] font-bold fill-slate-500" text-anchor="middle" x="77"
+                                        y="95">Ethics</text>
+                                    <text class="text-[4px] font-bold fill-slate-500" text-anchor="middle" x="23"
+                                        y="95">Data</text>
+                                    <text class="text-[4px] font-bold fill-slate-500" text-anchor="end" x="8"
+                                        y="42">Design</text>
+                                </svg>
+                            </div>
+                            <div class="mt-8 grid grid-cols-2 gap-4 w-full">
+                                <div class="text-center p-2 bg-slate-50 rounded-lg">
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Top Strengths</p>
+                                    <p class="text-sm font-bold text-primary">Logic &amp; Methods</p>
+                                </div>
+                                <div class="text-center p-2 bg-slate-50 rounded-lg">
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase">Improvement</p>
+                                    <p class="text-sm font-bold text-magenta">Data Modeling</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Secondary Visuals Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Participation Score Gauge -->
+                        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-bold text-slate-900">Participation Score</h3>
+                                <p class="text-xs text-slate-500">Community and forum interaction weight</p>
+                            </div>
+                            <div class="relative flex flex-col items-center">
+                                <!-- SVG Gauge -->
+                                <svg class="w-48 h-24" viewbox="0 0 100 50">
+                                    <path d="M 10 50 A 40 40 0 0 1 90 50" fill="none" stroke="#f1f5f9"
+                                        stroke-linecap="round" stroke-width="12"></path>
+                                    <path d="M 10 50 A 40 40 0 0 1 78 25" fill="none" stroke="url(#gradient-gauge)"
+                                        stroke-linecap="round" stroke-width="12"></path>
+                                    <defs>
+                                        <lineargradient id="gradient-gauge" x1="0%" x2="100%" y1="0%" y2="0%">
+                                            <stop offset="0%" stop-color="#1152d4"></stop>
+                                            <stop offset="100%" stop-color="#d946ef"></stop>
+                                        </lineargradient>
+                                    </defs>
+                                </svg>
+                                <div class="absolute bottom-0 flex flex-col items-center">
+                                    <span class="text-4xl font-black text-slate-900">82</span>
+                                    <span
+                                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Exceptional</span>
+                                </div>
+                            </div>
+                            <div class="mt-8 space-y-3">
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-500">Forum Posts</span>
+                                    <span class="font-bold">24</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-500">Peer Reviews</span>
+                                    <span class="font-bold">12</span>
+                                </div>
+                                <div class="flex items-center justify-between text-sm">
+                                    <span class="text-slate-500">Collab Sessions</span>
+                                    <span class="font-bold">8</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Course Completion Funnel -->
+                        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+                            <div class="mb-6">
+                                <h3 class="text-lg font-bold text-slate-900">Course Completion</h3>
+                                <p class="text-xs text-slate-500">Journey from enrollment to certification</p>
+                            </div>
+                            <div class="space-y-4">
+                                <!-- Funnel Step 1 -->
+                                <div class="relative">
+                                    <div
+                                        class="w-full bg-primary/5 h-12 rounded-lg border border-primary/10 flex items-center px-4 relative overflow-hidden">
+                                        <div class="absolute inset-y-0 left-0 bg-primary opacity-10"
+                                            style="width: 100%"></div>
+                                        <span class="text-sm font-bold text-slate-700 relative z-10">Enrolled
+                                            Students</span>
+                                        <span class="ml-auto text-sm font-black text-primary relative z-10">1,240</span>
+                                    </div>
+                                </div>
+                                <!-- Funnel Step 2 -->
+                                <div class="relative px-4">
+                                    <div
+                                        class="w-full bg-primary/5 h-12 rounded-lg border border-primary/10 flex items-center px-4 relative overflow-hidden">
+                                        <div class="absolute inset-y-0 left-0 bg-primary opacity-20" style="width: 85%">
+                                        </div>
+                                        <span class="text-sm font-bold text-slate-700 relative z-10">Module 1
+                                            Cleared</span>
+                                        <span class="ml-auto text-sm font-black text-primary relative z-10">1,054</span>
+                                    </div>
+                                </div>
+                                <!-- Funnel Step 3 -->
+                                <div class="relative px-8">
+                                    <div
+                                        class="w-full bg-primary/5 h-12 rounded-lg border border-primary/10 flex items-center px-4 relative overflow-hidden">
+                                        <div class="absolute inset-y-0 left-0 bg-primary opacity-40" style="width: 60%">
+                                        </div>
+                                        <span class="text-sm font-bold text-slate-700 relative z-10">Mid-term
+                                            Passed</span>
+                                        <span class="ml-auto text-sm font-black text-primary relative z-10">744</span>
+                                    </div>
+                                </div>
+                                <!-- Funnel Step 4 -->
+                                <div class="relative px-12">
+                                    <div
+                                        class="w-full bg-primary h-12 rounded-lg flex items-center px-4 shadow-lg shadow-primary/20">
+                                        <span class="text-sm font-bold text-white">Final Thesis Submitted</span>
+                                        <span class="ml-auto text-sm font-black text-white">412</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recent Activity Table -->
+                    <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                            <h3 class="text-lg font-bold text-slate-900">Module Performance Breakdown</h3>
+                            <button class="text-primary text-sm font-semibold hover:underline">View All Modules</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-slate-50">
+                                        <th class="px-6 py-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            Module Name</th>
+                                        <th class="px-6 py-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            Status</th>
+                                        <th class="px-6 py-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            Avg Score</th>
+                                        <th class="px-6 py-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            Time (Avg)</th>
+                                        <th class="px-6 py-4 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                                            Activity</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-slate-100">
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4">
+                                            <div class="flex flex-col">
+                                                <span class="text-sm font-bold text-slate-900">01. Research
+                                                    Ethics</span>
+                                                <span class="text-xs text-slate-500">Core Academic Standard</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="px-2.5 py-1 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase tracking-wide">Completed</span>
+                                        </td>
+                                        <td class="px-6 py-4 font-bold text-sm">92%</td>
+                                        <td class="px-6 py-4 text-sm text-slate-600">4h 20m</td>
+                                        <td class="px-6 py-4">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="bg-primary h-full" style="width: 100%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4">
+                                            <div class="flex flex-col">
+                                                <span class="text-sm font-bold text-slate-900">02. Quantitative
+                                                    Analysis</span>
+                                                <span class="text-xs text-slate-500">Advanced Statistics</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="px-2.5 py-1 rounded-full bg-blue-100 text-blue-700 text-[10px] font-bold uppercase tracking-wide">In
+                                                Progress</span>
+                                        </td>
+                                        <td class="px-6 py-4 font-bold text-sm">78%</td>
+                                        <td class="px-6 py-4 text-sm text-slate-600">8h 45m</td>
+                                        <td class="px-6 py-4">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="bg-primary h-full" style="width: 65%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="hover:bg-slate-50 transition-colors">
+                                        <td class="px-6 py-4">
+                                            <div class="flex flex-col">
+                                                <span class="text-sm font-bold text-slate-900">03. Qualitative
+                                                    Methods</span>
+                                                <span class="text-xs text-slate-500">Interview Techniques</span>
+                                            </div>
+                                        </td>
+                                        <td class="px-6 py-4">
+                                            <span
+                                                class="px-2.5 py-1 rounded-full bg-slate-100 text-slate-500 text-[10px] font-bold uppercase tracking-wide">Locked</span>
+                                        </td>
+                                        <td class="px-6 py-4 font-bold text-sm text-slate-300">N/A</td>
+                                        <td class="px-6 py-4 text-sm text-slate-300">--</td>
+                                        <td class="px-6 py-4">
+                                            <div class="w-24 bg-slate-100 h-1.5 rounded-full overflow-hidden">
+                                                <div class="bg-primary h-full" style="width: 0%"></div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
