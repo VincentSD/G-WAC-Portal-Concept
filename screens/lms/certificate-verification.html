@@ -45,6 +45,25 @@
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- PROTOTYPE NAV -->
+    <div style="background:#202b5d;"
+        class="w-full px-4 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold z-[100] relative">
+        <a href="analytics-hub.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            <span class="hidden sm:inline">Prev: Analytics Hub</span>
+            <span class="sm:hidden">Prev</span>
+        </a>
+        <span class="opacity-70 text-center flex-1 px-4 truncate">G-WAC Prototype · Moodle: 08/11 — Certificate Verification</span>
+        <a href="sso-transition.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
+            <span class="hidden sm:inline">Next: SSO Sync</span>
+            <span class="sm:hidden">Next</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+        </a>
+    </div>
     <div class="relative flex h-auto min-screen w-full flex-col group/design-root overflow-x-hidden">
         <div class="layout-container flex h-full grow flex-col">
             <!-- Top Navigation -->
@@ -63,9 +82,9 @@
                     </div>
                     <div class="hidden md:flex items-center gap-9">
                         <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
-                            href="#">Dashboard</a>
+                            href="../applicant/dashboard.html">Dashboard</a>
                         <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
-                            href="#">My Courses</a>
+                            href="../public/course-details.html">My Courses</a>
                         <a class="text-slate-900 dark:text-slate-100 text-sm font-bold border-b-2 border-primary"
                             href="#">Certificates</a>
                         <a class="text-slate-600 dark:text-slate-400 text-sm font-medium hover:text-primary transition-colors"
@@ -92,7 +111,7 @@
             <main class="flex-1 px-4 md:px-20 lg:px-40 py-8">
                 <!-- Breadcrumbs -->
                 <div class="flex flex-wrap gap-2 mb-6">
-                    <a class="text-primary text-sm font-medium" href="#">Home</a>
+                    <a class="text-primary text-sm font-medium" href="../public/home.html">Home</a>
                     <span class="text-slate-400 text-sm font-medium">/</span>
                     <a class="text-primary text-sm font-medium" href="#">Verification</a>
                     <span class="text-slate-400 text-sm font-medium">/</span>

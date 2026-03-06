@@ -48,16 +48,24 @@
 
 <body class="bg-white font-display text-slate-900">
     <!-- PROTOTYPE NAV -->
-    <div style="background:#202b5d;"
-        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
-        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+    <div style="background:#8b5cf6;"
+        class="w-full px-4 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold z-[100] relative">
+        <a href="admissions-analytics.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
             </svg>
-            Back to Prototype Index
+            <span class="hidden sm:inline">Prev: Admissions Analytics</span>
+            <span class="sm:hidden">Prev</span>
         </a>
-        <span class="opacity-70">G-WAC Prototype · Alternate View — Admissions Analytics (v1)</span>
-        <div class="w-24"></div>
+        <span class="opacity-90 text-center flex-1 px-4 truncate">G-WAC Prototype · Review & Admin: 05/05 — Institutional Analytics Hub</span>
+        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
+            <span class="hidden sm:inline">Finish Track</span>
+            <span class="sm:hidden">Next</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+            </svg>
+        </a>
+    </div>
     </div>
     <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <header class="sticky top-0 z-50 w-full border-b border-secondary/5 bg-white px-6 lg:px-20 py-5">
@@ -75,7 +83,7 @@
                     </div>
                     <nav class="hidden lg:flex items-center gap-10">
                         <a class="text-secondary border-b-2 border-primary pb-1 text-sm font-bold transition-colors"
-                            href="#">Dashboard</a>
+                            href="institutional-analytics.html">Dashboard</a>
                         <a class="text-slate-custom hover:text-secondary text-sm font-bold transition-colors"
                             href="#">Demographics</a>
                         <a class="text-slate-custom hover:text-secondary text-sm font-bold transition-colors"

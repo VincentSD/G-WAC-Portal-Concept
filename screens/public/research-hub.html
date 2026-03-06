@@ -50,20 +50,21 @@
 
 <body class="bg-background-dark text-slate-100 font-display">
     <!-- PROTOTYPE NAV -->
-    <div style="background:#b22472;"
-        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
-        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+    <div style="background:#202b5d;"
+        class="w-full px-4 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold z-[100] relative">
+        <a href="course-details.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
             </svg>
-            Back to Prototype Index
+            <span class="hidden sm:inline">Prev: Course Detail</span>
+            <span class="sm:hidden">Prev</span>
         </a>
-        <span class="opacity-70">G-WAC Prototype · 03 / 16 — Public Website: Research Hub</span>
-        <a href="../applicant/admissions-form.html"
-            class="flex items-center gap-1 hover:opacity-80 transition-opacity">
-            Next: Apply
+        <span class="opacity-90 text-center flex-1 px-4 truncate">G-WAC Prototype · Public Website: 03/03 — Research Hub</span>
+        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
+            <span class="hidden sm:inline">Finish Track</span>
+            <span class="sm:hidden">Next</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
             </svg>
         </a>
     </div>
@@ -79,11 +80,11 @@
                     </a>
                     <nav class="hidden lg:flex items-center gap-8">
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Research</a>
+                            href="research-hub.html">Research</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Courses</a>
+                            href="course-details.html">Courses</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Impact</a>
+                            href="course-details.html">Impact</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
                             href="#">Partners</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
@@ -437,7 +438,7 @@
                                 <p class="text-slate-custom mt-2">Active modular research streams.</p>
                             </div>
                             <a class="text-primary font-bold text-sm flex items-center gap-1 hover:gap-2 transition-all"
-                                href="#">Full Catalog <span
+                                href="course-details.html">Full Catalog <span
                                     class="material-symbols-outlined text-sm">arrow_forward</span></a>
                         </div>
                         <div class="grid md:grid-cols-2 gap-6">
@@ -491,7 +492,7 @@
                                 <h3 class="text-xl font-bold mb-6">Access Points</h3>
                                 <div class="flex flex-col gap-4">
                                     <a class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
-                                        href="#">
+                                        href="research-hub.html">
                                         <div class="size-10 rounded-lg bg-primary flex items-center justify-center">
                                             <span class="material-symbols-outlined text-white">key</span>
                                         </div>
@@ -501,7 +502,7 @@
                                         </div>
                                     </a>
                                     <a class="flex items-center gap-4 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
-                                        href="#">
+                                        href="research-hub.html">
                                         <div class="size-10 rounded-lg bg-white/10 flex items-center justify-center">
                                             <span
                                                 class="material-symbols-outlined text-white text-sm">folder_shared</span>
@@ -603,17 +604,17 @@
                 <div>
                     <h4 class="font-bold mb-6">Institute</h4>
                     <ul class="flex flex-col gap-4 text-sm text-white/60">
-                        <li><a class="hover:text-primary transition-colors" href="#">Research Projects</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Impact Metrics</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Collaborators</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">News Portal</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="research-hub.html">Research Projects</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="course-details.html">Impact Metrics</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="research-hub.html">Collaborators</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../lms/student-dashboard.html">News Portal</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-6">Academics</h4>
                     <ul class="flex flex-col gap-4 text-sm text-white/60">
-                        <li><a class="hover:text-primary transition-colors" href="#">Course Modules</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Admissions</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="course-details.html">Course Modules</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../applicant/admissions-form.html">Admissions</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Scholarships</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Symposiums</a></li>
                     </ul>

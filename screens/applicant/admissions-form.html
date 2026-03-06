@@ -50,20 +50,21 @@
 
 <body class="bg-background-light font-display text-slate-900 overflow-x-hidden">
     <!-- PROTOTYPE NAV -->
-    <div style="background:#b22472;"
-        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
-        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+    <div style="background:#f59e0b;"
+        class="w-full px-4 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold z-[100] relative">
+        <a href="../../index.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
             </svg>
-            Back to Prototype Index
+            <span class="hidden sm:inline">Back to Prototype Index</span>
+            <span class="sm:hidden">Prev</span>
         </a>
-        <span class="opacity-70">G-WAC Prototype · 04 / 16 — Applicant Journey: Admissions Form</span>
-        <a href="screening-quiz.html"
-            class="flex items-center gap-1 hover:opacity-80 transition-opacity">
-            Next: Screening Quiz
+        <span class="opacity-90 text-center flex-1 px-4 truncate">G-WAC Prototype · Applicant Journey: 01/06 — Admissions Form</span>
+        <a href="screening-quiz.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity whitespace-nowrap">
+            <span class="hidden sm:inline">Next: Screening Quiz</span>
+            <span class="sm:hidden">Next</span>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
             </svg>
         </a>
     </div>
@@ -79,11 +80,11 @@
                     </a>
                     <nav class="hidden lg:flex items-center gap-8">
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Research</a>
+                            href="../public/research-hub.html">Research</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Courses</a>
+                            href="../public/course-details.html">Courses</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
-                            href="#">Impact</a>
+                            href="../public/course-details.html">Impact</a>
                         <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
                             href="#">About</a>
                     </nav>
@@ -312,9 +313,9 @@
                 <div>
                     <h4 class="font-bold mb-6">Resources</h4>
                     <ul class="flex flex-col gap-4 text-sm text-white/60">
-                        <li><a class="hover:text-primary transition-colors" href="#">2026 Admission FAQs</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="admissions-form.html">2026 Admission FAQs</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Scholarship Info</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Program Catalog</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="../public/course-details.html">Program Catalog</a></li>
                     </ul>
                 </div>
                 <div>
