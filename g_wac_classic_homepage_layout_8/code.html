@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>G-WAC Reviewer Admin Listing 2026</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" href="https://g-wac.org/wp-content/uploads/2020/07/g-wac-favicon-150x150.jpg" type="image/jpeg">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#b22472", // G-WAC Magenta
+                        "secondary": "#202b5d", // Deep Navy
+                        "slate-custom": "#62718d", // Slate Text
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#20121a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply bg-background-light font-display text-slate-900; }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            @apply bg-secondary/10 rounded-full;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display overflow-x-hidden">
+    <!-- PROTOTYPE NAV -->
+    <div style="background:#202b5d;"
+        class="w-full px-6 lg:px-20 py-2 flex items-center justify-between text-white text-xs font-bold">
+        <a href="../gwac.html" class="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+            </svg>
+            Back to Prototype Index
+        </a>
+        <span class="opacity-70">G-WAC Prototype · 10 / 16 — Review &amp; Admin: Reviewer Listing</span>
+        <a href="../g_wac_classic_homepage_layout_7/code.html"
+            class="flex items-center gap-1 hover:opacity-80 transition-opacity">
+            Next: Team Review
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
+            </svg>
+        </a>
+    </div>
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <header
+            class="sticky top-0 z-50 w-full border-b border-secondary/10 bg-white/95 backdrop-blur-sm px-6 lg:px-20 py-4">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a href="../gwac.html"
+                        class="flex items-center gap-3 text-secondary hover:opacity-80 transition-opacity">
+                        <img src="https://g-wac.org/wp-content/uploads/2020/07/G-WAC_new-logo.png" alt="G-WAC Logo"
+                            class="h-10 w-auto">
+                    </a>
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Dashboard</a>
+                        <a class="text-primary border-b-2 border-primary text-sm font-bold transition-colors"
+                            href="#">Reviewer Portal</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Applications</a>
+                        <a class="text-secondary hover:text-primary text-sm font-semibold transition-colors"
+                            href="#">Reports</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-6">
+                    <div class="flex items-center gap-3 pr-6 border-r border-secondary/10">
+                        <div class="text-right hidden sm:block">
+                            <p class="text-xs font-bold text-secondary leading-none">Admin Panel</p>
+                            <p class="text-[10px] text-slate-custom">Reviewer Coordinator</p>
+                        </div>
+                        <div class="size-10 rounded-full bg-secondary flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined">person</span>
+                        </div>
+                    </div>
+                    <button
+                        class="bg-secondary hover:bg-secondary/90 text-white px-5 py-2 rounded-lg text-xs font-bold transition-all">
+                        Sign Out
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="flex-1 bg-background-light">
+            <section class="bg-secondary py-16 px-6 lg:px-20 relative overflow-hidden">
+                <div class="absolute inset-0 opacity-10 pointer-events-none">
+                    <div class="absolute -right-20 -top-20 size-96 rounded-full border-[40px] border-white"></div>
+                </div>
+                <div
+                    class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6 relative z-10">
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-3 py-1 rounded-full mb-4">
+                            <span class="size-2 bg-primary rounded-full"></span>
+                            <span class="text-white text-[10px] font-bold uppercase tracking-wider">Reviewer
+                                Management</span>
+                        </div>
+                        <h1 class="text-white text-4xl lg:text-5xl font-black leading-tight">Submission <span
+                                class="text-primary italic">Review Board</span></h1>
+                        <p class="text-slate-300 mt-4 max-w-2xl text-lg">Manage academic proposals, assign peer
+                            reviewers, and monitor scoring progress for the 2026-2027 grant cycle.</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button
+                            class="bg-primary hover:bg-primary/90 text-white px-6 py-4 rounded-xl font-bold flex items-center gap-2 transition-all shadow-lg shadow-primary/30">
+                            <span class="material-symbols-outlined">add_task</span> Assign New Proposal
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="py-12 px-6 lg:px-20 max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-12 gap-8">
+                    <aside class="lg:col-span-3">
+                        <div class="sticky top-28 flex flex-col gap-6">
+                            <div class="bg-white rounded-2xl p-6 border border-secondary/10 shadow-sm">
+                                <h3
+                                    class="text-secondary font-bold mb-6 flex items-center gap-2 border-b border-secondary/5 pb-4">
+                                    <span class="material-symbols-outlined text-secondary text-xl">tune</span>
+                                    Filter Listings
+                                </h3>
+                                <div class="flex flex-col gap-6">
+                                    <div>
+                                        <label
+                                            class="text-[10px] font-bold text-slate-custom uppercase tracking-widest mb-2 block">Application
+                                            Status</label>
+                                        <select
+                                            class="w-full bg-background-light border-secondary/10 rounded-lg text-sm text-secondary focus:ring-secondary focus:border-secondary">
+                                            <option>All Statuses</option>
+                                            <option>Under Review</option>
+                                            <option>Pending Score</option>
+                                            <option>Completed</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label
+                                            class="text-[10px] font-bold text-slate-custom uppercase tracking-widest mb-3 block">Research
+                                            Domain</label>
+                                        <div class="flex flex-col gap-3">
+                                            <label
+                                                class="flex items-center gap-3 text-sm text-slate-custom hover:text-secondary cursor-pointer transition-colors group">
+                                                <input checked=""
+                                                    class="rounded border-secondary/20 text-secondary focus:ring-secondary"
+                                                    type="checkbox" />
+                                                <span
+                                                    class="group-hover:translate-x-1 transition-transform">Biosciences</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-sm text-slate-custom hover:text-secondary cursor-pointer transition-colors group">
+                                                <input
+                                                    class="rounded border-secondary/20 text-secondary focus:ring-secondary"
+                                                    type="checkbox" />
+                                                <span
+                                                    class="group-hover:translate-x-1 transition-transform">Sustainability</span>
+                                            </label>
+                                            <label
+                                                class="flex items-center gap-3 text-sm text-slate-custom hover:text-secondary cursor-pointer transition-colors group">
+                                                <input
+                                                    class="rounded border-secondary/20 text-secondary focus:ring-secondary"
+                                                    type="checkbox" />
+                                                <span class="group-hover:translate-x-1 transition-transform">Data
+                                                    Ethics</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="pt-4 border-t border-secondary/5">
+                                        <label
+                                            class="text-[10px] font-bold text-slate-custom uppercase tracking-widest mb-4 block">Scoring
+                                            Threshold</label>
+                                        <input
+                                            class="w-full h-1.5 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-secondary"
+                                            type="range" />
+                                        <div class="flex justify-between text-[10px] font-bold text-slate-custom mt-2">
+                                            <span>MIN 0</span>
+                                            <span>MAX 100</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2 pt-2">
+                                        <button
+                                            class="w-full py-3 bg-secondary text-white rounded-xl text-sm font-bold hover:bg-secondary/90 transition-all shadow-md shadow-secondary/10">
+                                            Apply Filters
+                                        </button>
+                                        <button
+                                            class="w-full py-3 bg-background-light text-slate-custom rounded-xl text-sm font-bold hover:bg-slate-200 transition-all">
+                                            Reset
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bg-secondary/5 rounded-2xl p-6 border border-secondary/10">
+                                <h4 class="text-secondary font-bold mb-2 flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-secondary text-lg">info</span> Reviewer
+                                    Tip
+                                </h4>
+                                <p class="text-slate-custom text-xs leading-relaxed">
+                                    Review the 2026 scoring metrics before finalizing evaluations. High-impact research
+                                    categories carry double weighting.
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+                    <div class="lg:col-span-9 flex flex-col gap-6">
+                        <div
+                            class="flex flex-col md:flex-row gap-4 items-center justify-between bg-white p-4 rounded-xl border border-secondary/10 shadow-sm">
+                            <div class="relative w-full md:w-96">
+                                <span
+                                    class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-custom">search</span>
+                                <input
+                                    class="w-full pl-10 pr-4 py-2.5 bg-background-light border-secondary/10 rounded-lg text-sm focus:ring-secondary focus:border-secondary"
+                                    placeholder="Search by Proposal ID or PI Name..." type="text" />
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span
+                                    class="text-[10px] font-bold text-slate-custom uppercase tracking-widest">Display:</span>
+                                <div class="flex bg-background-light p-1 rounded-lg border border-secondary/5">
+                                    <button class="p-1.5 bg-white text-secondary rounded shadow-sm">
+                                        <span class="material-symbols-outlined text-xl">view_list</span>
+                                    </button>
+                                    <button class="p-1.5 text-slate-custom hover:text-secondary">
+                                        <span class="material-symbols-outlined text-xl">grid_view</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div
+                                class="group bg-white rounded-2xl overflow-hidden border border-secondary/10 hover:border-primary/30 hover:shadow-2xl hover:shadow-secondary/5 transition-all duration-300">
+                                <div class="flex flex-col lg:flex-row lg:items-center p-6 gap-6">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="size-20 bg-background-light rounded-2xl flex flex-col items-center justify-center border border-secondary/5 group-hover:border-primary/20 transition-colors">
+                                            <span class="text-[10px] font-black text-slate-custom uppercase">ID</span>
+                                            <span class="text-secondary font-black text-xl">#3102</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                                            <span
+                                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Biosciences</span>
+                                            <span
+                                                class="text-slate-custom text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                                Submitted 15 Jan 2026
+                                            </span>
+                                        </div>
+                                        <h3
+                                            class="text-secondary text-xl font-bold leading-tight group-hover:text-primary transition-colors mb-2">
+                                            Climate-Driven Pathogen Evolution in Sub-Saharan Basins</h3>
+                                        <p class="text-slate-custom text-sm font-medium">Lead PI: Dr. Elena R. Rossi •
+                                            Global Health Center</p>
+                                    </div>
+                                    <div class="flex flex-col items-end gap-4 min-w-[180px]">
+                                        <div
+                                            class="flex items-center gap-2 text-xs font-bold text-primary px-3 py-1.5 bg-primary/5 rounded-full">
+                                            <span class="material-symbols-outlined text-base">pending_actions</span>
+                                            Pending Review
+                                        </div>
+                                        <div class="flex gap-2 w-full">
+                                            <button
+                                                class="flex-1 bg-background-light hover:bg-slate-200 text-secondary px-4 py-3 rounded-xl text-xs font-bold transition-all border border-secondary/5">
+                                                View Details
+                                            </button>
+                                            <button
+                                                class="flex-1 bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-primary/20">
+                                                Score
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="group bg-white rounded-2xl overflow-hidden border border-secondary/10 hover:border-primary/30 hover:shadow-2xl hover:shadow-secondary/5 transition-all duration-300">
+                                <div class="flex flex-col lg:flex-row lg:items-center p-6 gap-6">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="size-20 bg-background-light rounded-2xl flex flex-col items-center justify-center border border-secondary/5 group-hover:border-primary/20 transition-colors">
+                                            <span class="text-[10px] font-black text-slate-custom uppercase">ID</span>
+                                            <span class="text-secondary font-black text-xl">#3095</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                                            <span
+                                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Sustainability</span>
+                                            <span
+                                                class="text-slate-custom text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                                Submitted 08 Jan 2026
+                                            </span>
+                                        </div>
+                                        <h3
+                                            class="text-secondary text-xl font-bold leading-tight group-hover:text-primary transition-colors mb-2">
+                                            Decentralized Power Grids for Rural Development 2.0</h3>
+                                        <p class="text-slate-custom text-sm font-medium">Lead PI: Prof. Marcus Thorne •
+                                            Urban Ecology Lab</p>
+                                    </div>
+                                    <div class="flex flex-col items-end gap-4 min-w-[180px]">
+                                        <div
+                                            class="flex items-center gap-2 text-xs font-bold text-green-600 px-3 py-1.5 bg-green-50 rounded-full">
+                                            <span class="material-symbols-outlined text-base">verified</span> Scored:
+                                            92/100
+                                        </div>
+                                        <div class="flex gap-2 w-full">
+                                            <button
+                                                class="flex-1 bg-background-light hover:bg-slate-200 text-secondary px-4 py-3 rounded-xl text-xs font-bold transition-all border border-secondary/5">
+                                                View Details
+                                            </button>
+                                            <button
+                                                class="flex-1 bg-secondary hover:bg-secondary/90 text-white px-4 py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-secondary/20">
+                                                Edit Score
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="group bg-white rounded-2xl overflow-hidden border border-secondary/10 hover:border-primary/30 hover:shadow-2xl hover:shadow-secondary/5 transition-all duration-300">
+                                <div class="flex flex-col lg:flex-row lg:items-center p-6 gap-6">
+                                    <div class="flex-shrink-0">
+                                        <div
+                                            class="size-20 bg-background-light rounded-2xl flex flex-col items-center justify-center border border-secondary/5 group-hover:border-primary/20 transition-colors">
+                                            <span class="text-[10px] font-black text-slate-custom uppercase">ID</span>
+                                            <span class="text-secondary font-black text-xl">#3088</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-1">
+                                        <div class="flex flex-wrap items-center gap-3 mb-2">
+                                            <span
+                                                class="bg-secondary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Data
+                                                Ethics</span>
+                                            <span
+                                                class="text-slate-custom text-[10px] font-bold uppercase tracking-widest flex items-center gap-1">
+                                                <span class="material-symbols-outlined text-xs">calendar_today</span>
+                                                Submitted 02 Jan 2026
+                                            </span>
+                                        </div>
+                                        <h3
+                                            class="text-secondary text-xl font-bold leading-tight group-hover:text-primary transition-colors mb-2">
+                                            Algorithmic Bias Mitigation in Health Diagnostics</h3>
+                                        <p class="text-slate-custom text-sm font-medium">Lead PI: Dr. Sarah Jenkins • AI
+                                            Governance Inst.</p>
+                                    </div>
+                                    <div class="flex flex-col items-end gap-4 min-w-[180px]">
+                                        <div
+                                            class="flex items-center gap-2 text-xs font-bold text-amber-600 px-3 py-1.5 bg-amber-50 rounded-full">
+                                            <span class="material-symbols-outlined text-base">assignment_late</span>
+                                            Under Review
+                                        </div>
+                                        <div class="flex gap-2 w-full">
+                                            <button
+                                                class="flex-1 bg-background-light hover:bg-slate-200 text-secondary px-4 py-3 rounded-xl text-xs font-bold transition-all border border-secondary/5">
+                                                View Details
+                                            </button>
+                                            <button
+                                                class="flex-1 bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-xl text-xs font-bold transition-all shadow-lg shadow-primary/20">
+                                                Score
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between pt-8 border-t border-secondary/10">
+                            <p class="text-xs text-slate-custom font-medium">Showing <span
+                                    class="font-bold text-secondary">3</span> of <span
+                                    class="font-bold text-secondary">64</span> proposals</p>
+                            <div class="flex gap-2">
+                                <button
+                                    class="size-10 flex items-center justify-center rounded-lg border border-secondary/10 bg-white text-slate-custom hover:bg-secondary hover:text-white transition-all">
+                                    <span class="material-symbols-outlined text-sm">chevron_left</span>
+                                </button>
+                                <button
+                                    class="size-10 flex items-center justify-center rounded-lg border border-primary bg-primary text-white text-xs font-bold shadow-md shadow-primary/20">1</button>
+                                <button
+                                    class="size-10 flex items-center justify-center rounded-lg border border-secondary/10 bg-white text-slate-custom hover:bg-background-light text-xs font-bold">2</button>
+                                <button
+                                    class="size-10 flex items-center justify-center rounded-lg border border-secondary/10 bg-white text-slate-custom hover:bg-background-light text-xs font-bold">3</button>
+                                <button
+                                    class="size-10 flex items-center justify-center rounded-lg border border-secondary/10 bg-white text-slate-custom hover:bg-secondary hover:text-white transition-all">
+                                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-secondary pt-20 pb-10 px-6 lg:px-20 text-white overflow-hidden relative">
+            <div class="absolute right-0 bottom-0 opacity-5 pointer-events-none">
+                <span class="material-symbols-outlined text-[300px]">hub</span>
+            </div>
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-4 gap-12 border-b border-white/10 pb-12 relative z-10">
+                <div class="flex flex-col gap-6">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="size-10 flex items-center justify-center bg-primary rounded-lg shadow-lg shadow-primary/20">
+                            <span class="material-symbols-outlined text-2xl">school</span>
+                        </div>
+                        <h2 class="text-2xl font-black tracking-tight">G-WAC</h2>
+                    </div>
+                    <p class="text-white/60 text-sm leading-relaxed max-w-xs">
+                        Reviewer Portal - Administrative Access Level. For internal institutional use only. Security
+                        protocols strictly enforced for the 2026 academic cycle.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary uppercase tracking-widest text-xs">Portal Links</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/70 font-medium">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> Reviewer Guidelines</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> Scoring Rubrics 2026</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> Conflict of Interest</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> System Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary uppercase tracking-widest text-xs">Internal Support</h4>
+                    <ul class="flex flex-col gap-4 text-sm text-white/70 font-medium">
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> Help Desk</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> IT Services</a></li>
+                        <li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span
+                                    class="size-1 bg-primary rounded-full"></span> Admin Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-6 text-primary uppercase tracking-widest text-xs">Quick Contact</h4>
+                    <div class="flex flex-col gap-4 text-sm text-white/70 font-medium">
+                        <p class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary text-lg">mail</span>
+                            admin-board@g-wac.institute
+                        </p>
+                        <p class="flex items-center gap-3 hover:text-white transition-colors cursor-pointer">
+                            <span class="material-symbols-outlined text-primary text-lg">security</span>
+                            Internal Extension: 404
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40 font-bold uppercase tracking-widest">
+                <p>© 2026 G-WAC Research Institute. Admin Portal v3.0.0</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Use</a>
+                    <a class="hover:text-primary transition-colors" href="#">Confidentiality</a>
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
